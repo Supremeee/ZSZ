@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="template-web.js"></script>
+    <script id="test" type="text/html">
+        {{each list1 as item i}}
+        <tr><td>{{i+1}}</td><td>{{item.name}}</td><td>{{item.age}}</td></tr>
+        {{/each}}
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            var data = [{ name: 'jack', age: 8 }, { name: 'tom', age: 18 }, { name: 'rose', age: 12 }];
+            var html = template("test", { list1: data });
+            $("#t1").html(html);
+            alert(html);
+        });
+
+    </script>
+</head>
+<body>
+    <table id="t1">
+
+    </table>
+</body>
+</html>

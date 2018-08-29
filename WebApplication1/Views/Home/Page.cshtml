@@ -1,0 +1,27 @@
+﻿@using ZSZ.CommonMVC
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Page</title>
+</head>
+<body>
+    <div> 
+        @{ 
+            RuPengPager pager = new RuPengPager();
+            pager.CurrentPageClassName = "active";
+            pager.MaxPageCount = 10;
+            pager.PageIndex = 3;
+            pager.PageSize = 50;
+            pager.TotalCount = 809;
+            pager.UrlPattern = "/Data?p={pn}";
+        }
+        @Html.Raw(pager.GetPagerHtml())
+    </div>
+</body>
+</html>
