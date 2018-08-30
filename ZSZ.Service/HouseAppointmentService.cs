@@ -67,12 +67,33 @@ namespace ZSZ.Service
 
         public HouseAppointmentDTO[] GetPagedData(long cityId, string status, int pageSize, int currentIndex)
         {
-            throw new NotImplementedException();
+            using (ZSZDbContext ctx = new ZSZDbContext())
+            {
+                BaseService<HouseAppointmentEntity> bs
+                    = new BaseService<HouseAppointmentEntity>(ctx);
+                var houseApps = bs.GetAll().Include(a => a.House)
+                    //Include("House.Community")
+                    .Include(nameof(HouseAppointmentEntity.House) + "." + nameof(HouseEntity.Community))
+                    .Include(a => a.FollowAdminUser)
+                    //Include("House.Community.Region")
+                    .Include(nameof(HouseAppointmentEntity.House) + "." + nameof(HouseEntity.Community) + "." + nameof(CommunityEntity.Region))
+                    .AsNoTracking().Where(u => u.House.Community.Region.CityId == cityId && u.Status == status).OrderByDescending(u=>u.CreateDateTime).Skip(currentIndex).Take(pageSize);
+               
+                
+                return houseApps.ToList().Select(u=>ToDTO(u)).ToArray();
+            }
         }
 
         public long GetTotalCount(long cityId, string status)
         {
-            throw new NotImplementedException();
+            using (ZSZDbContext ctx = new ZSZDbContext())
+            {
+                BaseService<HouseAppointmentEntity> bs
+                    = new BaseService<HouseAppointmentEntity>(ctx);
+                var count = bs.GetAll().LongCount(u => u.House.Community.Region.CityId == cityId && u.Status == status);
+                
+                return count;
+            }
         }
         private HouseAppointmentDTO ToDTO(HouseAppointmentEntity houseApp)
         {

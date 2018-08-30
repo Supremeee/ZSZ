@@ -68,6 +68,8 @@
     <Compile Include="Entities\IdNameEntity.cs" />
     <Compile Include="Entities\PermissionEntity.cs" />
     <Compile Include="HouseAppointmentService.cs" />
+    <Compile Include="HouseService.cs" />
+    <Compile Include="IdNameService.cs" />
     <Compile Include="ModelConfig\AdminLogConfig.cs" />
     <Compile Include="ModelConfig\AdminUserConfig.cs" />
     <Compile Include="ModelConfig\AttachmentConfig.cs" />
@@ -82,11 +84,16 @@
     <Compile Include="ModelConfig\RoleConfig.cs" />
     <Compile Include="ModelConfig\SettingConfig.cs" />
     <Compile Include="ModelConfig\UserConfig.cs" />
+    <Compile Include="PermissionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\RegionEntity.cs" />
     <Compile Include="Entities\RoleEntity.cs" />
     <Compile Include="Entities\SettingEntity.cs" />
     <Compile Include="Entities\UserEntity.cs" />
+    <Compile Include="RegionService.cs" />
+    <Compile Include="RoleService.cs" />
+    <Compile Include="SettingService.cs" />
+    <Compile Include="UserService.cs" />
     <Compile Include="ZSZDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
