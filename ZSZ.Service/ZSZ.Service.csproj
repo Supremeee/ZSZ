@@ -50,8 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminLogService.cs" />
+    <Compile Include="AdminUserService.cs" />
+    <Compile Include="AttachmentService.cs" />
     <Compile Include="BaseService.cs" />
     <Compile Include="CityService.cs" />
+    <Compile Include="CommunityService.cs" />
     <Compile Include="Entities\AdminLogEntity.cs" />
     <Compile Include="Entities\AdminUserEntity.cs" />
     <Compile Include="Entities\AttachmentEntity.cs" />
@@ -63,6 +67,7 @@
     <Compile Include="Entities\HousePicEntity.cs" />
     <Compile Include="Entities\IdNameEntity.cs" />
     <Compile Include="Entities\PermissionEntity.cs" />
+    <Compile Include="HouseAppointmentService.cs" />
     <Compile Include="ModelConfig\AdminLogConfig.cs" />
     <Compile Include="ModelConfig\AdminUserConfig.cs" />
     <Compile Include="ModelConfig\AttachmentConfig.cs" />

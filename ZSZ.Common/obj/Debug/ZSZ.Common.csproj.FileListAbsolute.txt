@@ -1,0 +1,9 @@
+c:\users\administrator\source\repos\ZSZ\ZSZ.Common\bin\Debug\ZSZ.Common.dll
+c:\users\administrator\source\repos\ZSZ\ZSZ.Common\bin\Debug\ZSZ.Common.pdb
+c:\users\administrator\source\repos\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.csprojAssemblyReference.cache
+c:\users\administrator\source\repos\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.csproj.CoreCompileInputs.cache
+c:\users\administrator\source\repos\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.dll
+c:\users\administrator\source\repos\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.pdb
+c:\users\administrator\source\repos\ZSZ\ZSZ.Common\bin\Debug\log4net.dll
+c:\users\administrator\source\repos\ZSZ\ZSZ.Common\bin\Debug\log4net.xml
+c:\users\administrator\source\repos\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.csproj.CopyComplete

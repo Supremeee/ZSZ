@@ -1,0 +1,15 @@
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.IService\bin\Debug\ZSZ.IService.dll
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.IService\bin\Debug\ZSZ.IService.pdb
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.dll
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.pdb
+E:\Project\ZSZ\ZSZ.IService\bin\Debug\ZSZ.IService.dll
+E:\Project\ZSZ\ZSZ.IService\bin\Debug\ZSZ.IService.pdb
+E:\Project\ZSZ\ZSZ.IService\bin\Debug\ZSZ.DTO.dll
+E:\Project\ZSZ\ZSZ.IService\bin\Debug\ZSZ.DTO.pdb
+E:\Project\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.csprojAssemblyReference.cache
+E:\Project\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.csproj.CoreCompileInputs.cache
+E:\Project\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.csproj.CopyComplete
+E:\Project\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.dll
+E:\Project\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.pdb

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,15 +34,41 @@ namespace ZSZ.Service
                 return city.Id;
             }
         }
-
+        private CityDTO ToDTO(CityEntity cityEntity)
+        {
+            CityDTO cityDTO = new CityDTO();
+            cityDTO.CreateDateTime = cityEntity.CreateDateTime;
+            cityDTO.Id = cityEntity.Id;
+            cityDTO.Name = cityEntity.Name;
+            return cityDTO;
+        }
+        /// <summary>
+        /// 获取所有城市
+        /// </summary>
+        /// <returns></returns>
         public CityDTO[] GetAll()
         {
-            throw new NotImplementedException();
+            using (ZSZDbContext ctx = new ZSZDbContext())
+            {
+                BaseService<CityEntity> service = new BaseService<CityEntity>(ctx);
+                return service.GetAll().AsNoTracking().ToList().Select(u => ToDTO(u)).ToArray();
+            }
         }
-
+        /// <summary>
+        /// 根据Id获取城市
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public CityDTO GetById(long id)
         {
-            throw new NotImplementedException();
+            using (ZSZDbContext ctx = new ZSZDbContext())
+            {
+                BaseService<CityEntity> service = new BaseService<CityEntity>(ctx);
+                var city =  service.GetById(id);
+                if (city == null)
+                    return null;
+                return ToDTO(city);
+            }
         }
 
         

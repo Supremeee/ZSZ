@@ -1,0 +1,10 @@
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\bin\Debug\ZSZ.CommonMVC.dll
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\bin\Debug\ZSZ.CommonMVC.pdb
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\bin\Debug\System.Web.Mvc.dll
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\bin\Debug\System.Web.Mvc.xml
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.csproj.CopyComplete
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.dll
+C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.pdb

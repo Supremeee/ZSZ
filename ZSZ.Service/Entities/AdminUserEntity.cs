@@ -17,7 +17,7 @@ namespace ZSZ.Service.Entities
         public virtual CityEntity City { get; set; }
 
         public int LoginErrorTimes { get; set; }
-        public DateTime? LoginErrorDateTime { get; set; }
+        public DateTime? LastErrorDateTime { get; set; }
 
         public virtual ICollection<RoleEntity> Roles { get; set; }
     }
