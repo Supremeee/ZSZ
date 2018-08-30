@@ -7,3 +7,12 @@ c:\users\administrator\source\repos\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.pdb
 c:\users\administrator\source\repos\ZSZ\ZSZ.Common\bin\Debug\log4net.dll
 c:\users\administrator\source\repos\ZSZ\ZSZ.Common\bin\Debug\log4net.xml
 c:\users\administrator\source\repos\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.csproj.CopyComplete
+E:\Project\ZSZ\ZSZ.Common\bin\Debug\ZSZ.Common.dll
+E:\Project\ZSZ\ZSZ.Common\bin\Debug\ZSZ.Common.pdb
+E:\Project\ZSZ\ZSZ.Common\bin\Debug\log4net.dll
+E:\Project\ZSZ\ZSZ.Common\bin\Debug\log4net.xml
+E:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.csprojAssemblyReference.cache
+E:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.csproj.CoreCompileInputs.cache
+E:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.csproj.CopyComplete
+E:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.dll
+E:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.pdb

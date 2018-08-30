@@ -20,7 +20,7 @@ namespace ZSZ.Service
                 if (role == null)
                     throw new ArgumentException("roleId不存在 " + roleId);
                 BaseService<PermissionEntity> permissionBS = new BaseService<PermissionEntity>(ctx);
-                var pers = permissionBS.GetAll().Where(u => permIds.Contains(u.Id));
+                var pers = permissionBS.GetAll().Where(u => permIds.Contains(u.Id)).ToArray();
                 foreach (var per in pers)
                 {
                     role.Permissions.Add(per);
@@ -94,7 +94,7 @@ namespace ZSZ.Service
                     throw new ArgumentException("roleId不存在 " + roleId);
                 role.Permissions.Clear();
                 BaseService<PermissionEntity> permissionBS = new BaseService<PermissionEntity>(ctx);
-                var pers = permissionBS.GetAll().Where(u => permIds.Contains(u.Id));
+                var pers = permissionBS.GetAll().Where(u => permIds.Contains(u.Id)).ToArray();
                 foreach (var per in pers)
                 {
                     role.Permissions.Add(per);
