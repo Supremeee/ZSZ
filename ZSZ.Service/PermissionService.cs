@@ -84,6 +84,15 @@ namespace ZSZ.Service
             }
         }
 
+        public void MarkDeleted(long id)
+        {
+            using (ZSZDbContext ctx = new ZSZDbContext())
+            {
+                BaseService<PermissionEntity> service = new BaseService<PermissionEntity>(ctx);
+                service.MarkDeleted(id);
+            }
+        }
+
         public void UpdatePermIds(long roleId, long[] permIds)
         {
             using (ZSZDbContext ctx = new ZSZDbContext())
@@ -102,6 +111,21 @@ namespace ZSZ.Service
                 ctx.SaveChanges();
             }
         }
+
+        public void UpdatePermission(long id, string perName, string description)
+        {
+            using (ZSZDbContext ctx = new ZSZDbContext())
+            {
+                BaseService<PermissionEntity> service = new BaseService<PermissionEntity>(ctx);
+                var per = service.GetById(id);
+                if (per == null)
+                    throw new ArgumentException("权限项不存在id=" + id);
+                per.Name = perName;
+                per.Description = description;
+                ctx.SaveChanges();
+            }
+        }
+
         private PermissionDTO ToDTO(PermissionEntity p)
         {
             PermissionDTO dto = new PermissionDTO();

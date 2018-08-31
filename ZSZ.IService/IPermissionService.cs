@@ -10,6 +10,8 @@ namespace ZSZ.IService
     public interface IPermissionService:IServiceSupport
     {
         long AddPermission(string permName, string description);
+        void UpdatePermission(long id, string perName, string description);
+        void MarkDeleted(long id);
         PermissionDTO GetById(long id);
         PermissionDTO[] GetAll();
         PermissionDTO GetByName(String name);//GetByName("User.Add")

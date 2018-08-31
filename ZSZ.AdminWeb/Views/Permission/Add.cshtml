@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<form class="form form-horizontal" id="addForm">
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>名称：</label>
+        <div class="formControls col-xs-8 col-sm-9">
+            <input type="text" class="input-text" value="" placeholder="" id="name" name="name">
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>描述：</label>
+        <div class="formControls col-xs-8 col-sm-9">
+            <input type="text" class="input-text" autocomplete="off" id="description" name="description">
+        </div>
+    </div>
+    <div class="row cl">
+        <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+            <input class="btn btn-primary radius" type="button" id="saveBtn" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+        </div>
+    </div>
+</form>
+@section FooterScript
+{
+    <script>
+
+        $(function () {
+            $("#saveBtn").click(function () {
+                var formData = $("#addForm").serializeArray();
+                $.ajax({
+                    url: "/Permission/Add",
+                    type: "post",
+                    data: formData,
+                    dataType: "json",
+                    success: function (res) {
+                        if (res.status == "ok") {
+                            parent.location.reload();
+                        } else {
+                            alert("error");
+                        }
+                    },
+                    error: function (res) {
+                        alert("内部错误");
+                    }
+                });
+            });
+
+        });
+    </script>    
+}

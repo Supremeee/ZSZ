@@ -8,3 +8,15 @@ C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.cs
 C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.csproj.CopyComplete
 C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.dll
 C:\Users\Administrator\source\repos\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.pdb
+E:\Project\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.csprojAssemblyReference.cache
+E:\Project\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.csproj.CoreCompileInputs.cache
+E:\Project\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.dll
+E:\Project\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.pdb
+E:\Project\ZSZ\ZSZ.CommonMVC\bin\Debug\ZSZ.CommonMVC.dll
+E:\Project\ZSZ\ZSZ.CommonMVC\bin\Debug\ZSZ.CommonMVC.pdb
+E:\Project\ZSZ\ZSZ.CommonMVC\bin\Debug\Newtonsoft.Json.dll
+E:\Project\ZSZ\ZSZ.CommonMVC\bin\Debug\System.Web.Mvc.dll
+E:\Project\ZSZ\ZSZ.CommonMVC\bin\Debug\Newtonsoft.Json.xml
+E:\Project\ZSZ\ZSZ.CommonMVC\bin\Debug\System.Web.Mvc.xml
+E:\Project\ZSZ\ZSZ.CommonMVC\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+E:\Project\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.csproj.CopyComplete

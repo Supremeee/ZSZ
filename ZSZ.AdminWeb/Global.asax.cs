@@ -18,6 +18,7 @@ namespace ZSZ.AdminWeb
         protected void Application_Start()
         {
             log4net.Config.XmlConfigurator.Configure();
+            GlobalFilters.Filters.Add(new JsonNetActionFilter());//jsonNet
             ModelBinders.Binders.Add(typeof(string), new TrimToDBCModelBinder());
             ModelBinders.Binders.Add(typeof(int), new TrimToDBCModelBinder());
             ModelBinders.Binders.Add(typeof(long), new TrimToDBCModelBinder());
