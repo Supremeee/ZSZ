@@ -50,10 +50,20 @@ namespace ZSZ.AdminWeb.Controllers
             PerSer.UpdatePermission(model.Id, model.Name, model.Description);
             return Json(new AjaxResult { Status = "ok" });
         }
+        [HttpPost]
         public ActionResult Delete(long id)
         {
             PerSer.MarkDeleted(id);
             return Json( new AjaxResult { Status="ok"});
+        }
+        [HttpPost]
+        public ActionResult BatchDelete(long[] selectIds)
+        {
+            foreach (var id in selectIds)
+            {
+                PerSer.MarkDeleted(id);
+            }
+            return Json(new AjaxResult { Status = "ok" });
         }
     }
 }

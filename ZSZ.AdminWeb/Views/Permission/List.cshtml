@@ -15,36 +15,38 @@
         <article class="cl pd-20">
 
             <div class="cl pd-5 bg-1 bk-gray mt-20">
-                <span class="l"> <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="admin_add('添加权限','/Permission/Add','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加权限</a> </span>
+                <span class="l"> <a href="javascript:;" onclick="batch_del()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="admin_add('添加权限','/Permission/Add','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加权限</a> </span>
                 <span class="r">共有数据：<strong>@Model.Length</strong> 条</span>
             </div>
-            <table class="table table-border table-bordered table-bg">
-                <thead>
-                    <tr>
-                        <th scope="col" colspan="9">权限列表</th>
-                    </tr>
-                    <tr class="text-c">
-                        <th width="25"><input type="checkbox" name="" value=""></th>
-                        <th width="150">名称</th>
-                        <th width="90">描述</th>
-                        <th width="100">操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var per in Model)
-                    {
-                        <tr class="text-c">
-                            <td><input type="checkbox" value="1" name=""></td>
-                            <td>@per.Name</td>
-                            <td>@per.Description</td>
-                            <td class="td-manage"> 
-                                <a title="编辑" href="javascript:;" onclick="admin_edit('权限编辑','/Permission/Edit/@per.Id','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
-                            <a title="删除" href="javascript:;" onclick="admin_del(this,'@per.Id')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
-                            </td>
+            <form id="listForm">
+                <table class="table table-border table-bordered table-bg">
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="9">权限列表</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
+                        <tr class="text-c">
+                            <th width="25"><input type="checkbox" name="" value=""></th>
+                            <th width="150">名称</th>
+                            <th width="90">描述</th>
+                            <th width="100">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var per in Model)
+                        {
+                            <tr class="text-c">
+                                <td><input type="checkbox" value="@per.Id" name="selectIds"></td>
+                                <td>@per.Name</td>
+                                <td>@per.Description</td>
+                                <td class="td-manage">
+                                    <a title="编辑" href="javascript:;" onclick="admin_edit('权限编辑','/Permission/Edit/@per.Id','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                                    <a title="删除" href="javascript:;" onclick="admin_del(this,'@per.Id')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </form>
         </article>
     </div>
 </section>
@@ -63,6 +65,29 @@
         /*管理员-增加*/
         function admin_add(title, url, w, h) {
             layer_show(title, url, w, h);
+        }
+
+        function batch_del() {
+            layer.confirm("确定要批量删除这些数据吗", function () {
+                var formData = $("#listForm").serializeArray();
+                $.ajax({
+                    url: "/Permission/BatchDelete",
+                    data: formData,
+                    type: "post",
+                    dataType: "json",
+                    success: function (res) {
+                        if (res.status == "ok") {
+                            layer.msg('已删除!', { icon: 1, time: 1000 });
+                            location.reload();
+                        } else {
+                            layer.msg('删除失败!', { icon: 2, time: 1000 });
+                        }
+                    },
+                    error: function () {
+                        alert("请求出错");
+                    }
+                });
+            });
         }
         /*管理员-删除*/
         function admin_del(obj, id) {
