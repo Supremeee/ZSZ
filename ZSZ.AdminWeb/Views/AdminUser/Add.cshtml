@@ -1,0 +1,94 @@
+﻿@model ZSZ.AdminWeb.Models.AdminUserAddModel
+@{
+    ViewBag.Title = "Add";
+}
+
+<form class="form form-horizontal" id="addForm">
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>手机号：</label>
+        <div class="formControls col-xs-8 col-sm-9">
+            <input type="text" class="input-text" value="" placeholder="" minlength="1" maxlength="50" id="phonenum" name="phonenum" required>
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>姓名：</label>
+        <div class="formControls col-xs-8 col-sm-9">
+            <input type="text" class="input-text" value="" placeholder="" minlength="1" maxlength="50" id="name" name="name" required>
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>密码：</label>
+        <div class="formControls col-xs-8 col-sm-9">
+            <input type="text" class="input-text" value="" placeholder="" minlength="1" maxlength="50" id="password" name="password" required>
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>确认密码：</label>
+        <div class="formControls col-xs-8 col-sm-9">
+            <input type="text" class="input-text" value="" placeholder="" minlength="1" maxlength="50" id="confirmPassword" name="confirmPassword" required>
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>邮箱：</label>
+        <div class="formControls col-xs-8 col-sm-9">
+            <input type="text" class="input-text" value="" placeholder="" minlength="1" maxlength="50" id="email" name="email" required>
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>城市：</label>
+        <div class="formControls col-xs-8 col-sm-9">
+            <select class="dropDown" id="city" name="city" required>
+                <option value="">请选择</option>
+                @foreach (var city in Model.Citys)
+                {
+                    <option value="@city.Name">@city.Name</option>
+                }
+            </select>
+        </div>
+    </div>
+    <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>角色：</label>
+    <div class="row cl">
+
+        @foreach (var role in Model.Roles)
+        {
+            <div class=" col-xs-4 col-sm-3">
+                <input type="checkbox" class="check-box" value="@role.Id" id="RoleIds_@role.Id" name="RoleIds">
+                <label for="RoleIds_@role.Id" class="form-label">@role.Name</label>
+            </div>
+        }
+
+    </div>
+    <div class="row cl">
+        <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+            <input class="btn btn-primary radius" type="button" id="saveBtn" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+        </div>
+    </div>
+</form>
+@section FooterScript
+{
+    <script>
+        $(function () {
+            $("#saveBtn").click(function () {
+                var formData = $("#addForm").serializeArray();
+                $.ajax({
+                    url: "/AdminUser/Add",
+                    type: "post",
+                    data: formData,
+                    dataType: "json",
+                    success: function (res) {
+                        if (res.status == "ok") {
+                            parent.location.reload();
+                        } else {
+                            alert("error");
+                        }
+                    },
+                    error: function (res) {
+                        alert("内部错误");
+                    }
+                });
+            });
+
+        });
+    </script>
+}
+

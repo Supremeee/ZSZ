@@ -13,3 +13,10 @@ E:\Project\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.csproj.CoreCompileInputs.cach
 E:\Project\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.csproj.CopyComplete
 E:\Project\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.dll
 E:\Project\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.pdb
+I:\Project\ZSZ\ZSZ.IService\bin\Debug\ZSZ.IService.dll
+I:\Project\ZSZ\ZSZ.IService\bin\Debug\ZSZ.IService.pdb
+I:\Project\ZSZ\ZSZ.IService\bin\Debug\ZSZ.DTO.dll
+I:\Project\ZSZ\ZSZ.IService\bin\Debug\ZSZ.DTO.pdb
+I:\Project\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.csprojResolveAssemblyReference.cache
+I:\Project\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.dll
+I:\Project\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.pdb

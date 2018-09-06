@@ -63,7 +63,7 @@ namespace ZSZ.Tests
             //Console.WriteLine(result);
             //使用腾讯短信接口发送短信
             //SendSMSUseTencentAPI();
-            //using(ZSZDbContext dbcontext = new ZSZDbContext())
+            //using (ZSZDbContext dbcontext = new ZSZDbContext())
             //{
             //    dbcontext.Database.Delete();
             //    dbcontext.Database.Create();

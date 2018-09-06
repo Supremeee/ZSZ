@@ -1,0 +1,122 @@
+﻿@model ZSZ.DTO.AdminUserDTO[]
+@{
+    ViewBag.Title = "List";
+}
+
+<section class="Hui-article-box">
+    <nav class="breadcrumb">
+        <i class="Hui-iconfont">&#xe67f;</i> 首页
+        <span class="c-gray en">&gt;</span>
+        后台用户管理
+        <span class="c-gray en">&gt;</span>
+        后台用户列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+    </nav>
+    <div class="Hui-article">
+        <article class="cl pd-20">
+
+            <div class="cl pd-5 bg-1 bk-gray mt-20">
+                <span class="l"> <a href="javascript:;" onclick="batch_del()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="user_add('添加用户','/AdminUser/Add','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加用户</a> </span>
+                <span class="r">共有数据：<strong>@Model.Length</strong> 条</span>
+            </div>
+            <form id="listForm">
+                <table class="table table-border table-bordered table-bg">
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="9">用户列表</th>
+                        </tr>
+                        <tr class="text-c">
+                            <th width="25"><input type="checkbox" name="" value=""></th>
+                            <th width="150">手机号</th>
+                            <th width="150">姓名</th>
+                            <th width="150">邮箱</th>
+                            <th width="100">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr class="text-c">
+                                <td><input type="checkbox" value="@user.Id" name="selectIds"></td>
+                                <td>@user.PhoneNum</td>
+                                <td>@user.Name</td>
+                                <td>@user.Email</td>
+                                <td class="td-manage">
+                                    <a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','/AdminUser/Edit/@user.Id','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                                    <a title="删除" href="javascript:;" onclick="user_del(this,'@user.Id')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </form>
+        </article>
+    </div>
+</section>
+
+
+@section FooterScript
+{
+    <script type="text/javascript">
+        /*
+            参数解释：
+            title	标题
+            url		请求的url
+            w		弹出层宽度（缺省调默认值）
+            h		弹出层高度（缺省调默认值）
+        */
+        /*管理员-增加*/
+        function user_add(title, url, w, h) {
+            layer_show(title, url, w, h);
+        }
+        function batch_del() {
+            layer.confirm("确定要批量删除这些数据吗", function () {
+
+                var formData = $("#listForm").serializeArray();
+                $.ajax({
+                    url: "/AdminUser/BatchDelete",
+                    data: formData,
+                    type: "post",
+                    dataType: "json",
+                    success: function (res) {
+                        if (res.status == "ok") {
+                            layer.msg('已删除!', { icon: 1, time: 1000 });
+                            location.reload();
+                        }else {
+                            layer.msg('删除失败!', { icon: 2, time: 1000 });
+                        }
+                    },
+                    error: function () {
+                        alert("请求出错");
+                    }
+                });
+            });
+        }
+        /*管理员-删除*/
+        function user_del(obj, id) {
+            layer.confirm('确认要删除吗？', function (index) {
+                //此处请求后台程序，下方是成功后的前台处理……
+                $.ajax({
+                    url: "/AdminUser/Delete",
+                    type: "post",
+                    data: { id: id },
+                    dataType: "json",
+                    success: function (res) {
+                        if (res.status == "ok") {
+                            $(obj).parents("tr").remove();
+                            layer.msg('已删除!', { icon: 1, time: 1000 });
+                        } else {
+                            layer.msg('删除失败!', { icon: 2, time: 1000 });
+                        }
+                    }
+                });
+
+            });
+        }
+        /*管理员-编辑*/
+        function user_edit(title, url, w, h) {
+            layer_show(title, url, w, h);
+        }
+
+
+    </script>
+}

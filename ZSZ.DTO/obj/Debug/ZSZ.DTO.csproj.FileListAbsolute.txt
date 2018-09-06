@@ -10,3 +10,8 @@ E:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.csprojAssemblyReference.cache
 E:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.csproj.CoreCompileInputs.cache
 E:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.dll
 E:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.pdb
+I:\Project\ZSZ\ZSZ.DTO\bin\Debug\ZSZ.DTO.dll
+I:\Project\ZSZ\ZSZ.DTO\bin\Debug\ZSZ.DTO.pdb
+I:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.csprojResolveAssemblyReference.cache
+I:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.dll
+I:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.pdb
