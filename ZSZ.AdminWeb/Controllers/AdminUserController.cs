@@ -24,11 +24,12 @@ namespace ZSZ.AdminWeb.Controllers
         [HttpGet]
         public ActionResult Add()
         {
-            var citys = CityService.GetAll();
+            var citys = CityService.GetAll().ToList();
+            citys.Insert(0, new CityDTO { Id = 0, Name = "总部" });
             var roles = RoleService.GetAll();
             AdminUserAddModel model = new AdminUserAddModel()
             {
-                Citys = citys,
+                Citys = citys.ToArray(),
                 Roles = roles
             };
             return View(model);
@@ -36,9 +37,42 @@ namespace ZSZ.AdminWeb.Controllers
         [HttpPost]
         public ActionResult Add(AdminUserAddPostModel model)
         {
+            
+            long? cityId = null;
+            if (model.City != 0)
+                cityId = model.City;
 
-            return Json(new AjaxResult {Status = "ok"});
+            long userId = AdminUserService.AddAdminUser(model.Name, model.PhoneNum, model.Password, model.Email, cityId);
+            RoleService.AddRoleIds(userId, model.RoleIds);
+            return Json(new AjaxResult { Status = "ok" });
 
+        }
+        [HttpGet]
+        public ActionResult Edit(long id)
+        {
+            var user = AdminUserService.GetById(id);
+            var roleIds = RoleService.GetByAdminUserId(user.Id);
+            var allRoles = RoleService.GetAll();
+            var citys = CityService.GetAll().ToList();
+            citys.Add(new CityDTO { Id = 0, Name = "总部" });
+
+            AdminUserEditModel model = new AdminUserEditModel();
+            model.AdminUser = user;
+            model.SelectRoleIds = roleIds.Select(u => u.Id).ToArray();
+            model.AllRoles = allRoles;
+            model.Citys = citys.ToArray();
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Edit(AdminUserEditPostModel model)
+        {
+            long? cityId = null;
+            if (model.City != 0)
+                cityId = model.City;
+
+            AdminUserService.UpdateAdminUser(model.Id, model.Name, model.PhoneNum, model.Password, model.Email, cityId);
+            RoleService.UpdateRoleIds(model.Id, model.RoleIds);
+            return Json(new AjaxResult { Status = "ok" });
         }
     }
 }

@@ -1164,6 +1164,8 @@
     <Compile Include="lib\ueditor\1.4.3\net\App_Code\UploadHandler.cs" />
     <Compile Include="Models\AdminUserAddModel.cs" />
     <Compile Include="Models\AdminUserAddPostModel.cs" />
+    <Compile Include="Models\AdminUserEditModel.cs" />
+    <Compile Include="Models\AdminUserEditPostModel.cs" />
     <Compile Include="Models\PermissionAddModel.cs" />
     <Compile Include="Models\PermissionEditModel.cs" />
     <Compile Include="Controllers\RoleController.cs" />
@@ -1210,6 +1212,7 @@
     <Content Include="Views\Role\Edit.cshtml" />
     <Content Include="Views\AdminUser\List.cshtml" />
     <Content Include="Views\AdminUser\Add.cshtml" />
+    <Content Include="Views\AdminUser\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

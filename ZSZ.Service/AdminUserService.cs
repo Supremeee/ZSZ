@@ -196,7 +196,11 @@ namespace ZSZ.Service
                 user.Name = name;
                 user.PhoneNum = phoneNum;
                 user.Email = email;
-                user.PasswordHash = CommonHelper.CaclMD5(user.PasswordSalt + password);
+                //如果密码为空 则不更新密码
+                if (!string.IsNullOrEmpty(password))
+                {
+                    user.PasswordHash = CommonHelper.CaclMD5(user.PasswordSalt + password);
+                }
                 user.CityId = cityId;
                 ctx.SaveChanges();
             }

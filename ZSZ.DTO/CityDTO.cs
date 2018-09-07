@@ -8,7 +8,8 @@ namespace ZSZ.DTO
 {
     public class CityDTO : BaseDTO
     {
-        public String Name { get; set; }
+        
+        public string Name { get; set; }
     }
 
 }

@@ -38,29 +38,23 @@
         });
         $(function () {
             $("#saveBtn").click(function () {
-                $("#addForm").validate({
-                    
-                    submitHandler: function () {
-                        var formData = $("#addForm").serializeArray();
-                        $.ajax({
-                            url: "/Role/Add",
-                            type: "post",
-                            data: formData,
-                            dataType: "json",
-                            success: function (res) {
-                                if (res.status == "ok") {
-                                    parent.location.reload();
-                                } else {
-                                    alert("error");
-                                }
-                            },
-                            error: function (res) {
-                                alert("内部错误");
-                            }
-                        });
+                var formData = $("#addForm").serializeArray();
+                $.ajax({
+                    url: "/Role/Add",
+                    type: "post",
+                    data: formData,
+                    dataType: "json",
+                    success: function (res) {
+                        if (res.status == "ok") {
+                            parent.location.reload();
+                        } else {
+                            alert("error");
+                        }
+                    },
+                    error: function (res) {
+                        alert("内部错误");
                     }
                 });
-                
             });
 
         });
