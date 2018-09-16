@@ -23,6 +23,7 @@ namespace ZSZ.AdminWeb.Controllers
             var models = AdminUserService.GetAll();
             return View(models);
         }
+        [CheckPermission("AdminUser.Add")]
         [HttpGet]
         public ActionResult Add()
         {
@@ -36,6 +37,7 @@ namespace ZSZ.AdminWeb.Controllers
             };
             return View(model);
         }
+        [CheckPermission("AdminUser.Add")]
         [HttpPost]
         public ActionResult Add(AdminUserAddPostModel model)
         {
@@ -53,7 +55,8 @@ namespace ZSZ.AdminWeb.Controllers
             return Json(new AjaxResult { Status = "ok" });
 
         }
-
+        [CheckPermission("AdminUser.Add")]
+        [CheckPermission("AdminUser.Edit")]
         public ActionResult CheckPhoneNum(string phoneNum,long? userId)
         {
             bool isOk = false;
@@ -69,6 +72,7 @@ namespace ZSZ.AdminWeb.Controllers
             return Json(new AjaxResult {Status = isOk ? "ok" : "exists"});
 
         }
+        [CheckPermission("AdminUser.Edit")]
         [HttpGet]
         public ActionResult Edit(long id)
         {
@@ -85,6 +89,7 @@ namespace ZSZ.AdminWeb.Controllers
             model.Citys = citys.ToArray();
             return View(model);
         }
+        [CheckPermission("AdminUser.Edit")]
         [HttpPost]
         public ActionResult Edit(AdminUserEditPostModel model)
         {
@@ -101,12 +106,14 @@ namespace ZSZ.AdminWeb.Controllers
             RoleService.UpdateRoleIds(model.Id, model.RoleIds);
             return Json(new AjaxResult { Status = "ok" });
         }
+        [CheckPermission("AdminUser.Delete")]
         [HttpPost]
         public ActionResult Delete(long id)
         {
             AdminUserService.MarkDeleted(id);
             return Json(new AjaxResult { Status = "ok" });
         }
+        [CheckPermission("AdminUser.BatchDelete")]
         [HttpPost]
         public ActionResult BatchDelete(long[] selectIds)
         {

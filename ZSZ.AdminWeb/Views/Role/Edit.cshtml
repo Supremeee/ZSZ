@@ -12,14 +12,14 @@
             <input type="text" class="input-text" value="@Model.Role.Name" placeholder="" id="name" name="name">
         </div>
     </div>
-
+    
     <div class="row cl">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>权限列表：</label>
         @foreach (var permission in Model.AllPermissions)
         {
             <div class="col-xs-4 col-sm-3 check-box">
                 <input type="checkbox" checked="@Model.PermissionIds.Contains(permission.Id)" value="@permission.Id" id="PermissionIds_@permission.Id" name="PermissionIds">
-                <label for="PermissionIds_@permission.Id">@permission.Name</label>
+                <label for="PermissionIds_@permission.Id">@permission.Description</label>
             </div>
         }
 
