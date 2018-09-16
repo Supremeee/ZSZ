@@ -28,6 +28,10 @@ namespace ZSZ.AdminWeb.Controllers
         [HttpPost]
         public ActionResult Add(RoleAddModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return Json(new AjaxResult { Status = "error", ErrorMsg = MVCHelper.GetValidMsg(ModelState) });
+            }
             long id = roleService.AddNew(model.Name);
             perService.AddPermIds(id, model.PermissionIds);
             return Json(new AjaxResult { Status = "ok" });
@@ -49,6 +53,10 @@ namespace ZSZ.AdminWeb.Controllers
         [HttpPost]
         public ActionResult Edit(RoleEditPostModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return Json(new AjaxResult { Status = "error", ErrorMsg = MVCHelper.GetValidMsg(ModelState) });
+            }
             roleService.Update(model.Id, model.Name);
             perService.UpdatePermIds(model.Id, model.PermissionIds);
             return Json(new AjaxResult { Status = "ok" });

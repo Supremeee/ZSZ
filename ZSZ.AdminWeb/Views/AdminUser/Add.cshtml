@@ -1,43 +1,44 @@
 ﻿@model ZSZ.AdminWeb.Models.AdminUserAddModel
 @{
     ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_LayoutNoNav.cshtml";
 }
 
 <form class="form form-horizontal" id="addForm">
     <div class="row cl">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>手机号：</label>
         <div class="formControls col-xs-8 col-sm-9">
-            <input type="text" class="input-text" value="" placeholder="" minlength="1" maxlength="50" id="phonenum" name="phonenum" required>
+            <input type="text" class="input-text" value="" placeholder="" id="phonenum" name="phonenum">
         </div>
     </div>
     <div class="row cl">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>姓名：</label>
         <div class="formControls col-xs-8 col-sm-9">
-            <input type="text" class="input-text" value="" placeholder="" minlength="1" maxlength="50" id="name" name="name" required>
+            <input type="text" class="input-text" value="" placeholder="" id="name" name="name" >
         </div>
     </div>
     <div class="row cl">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>密码：</label>
         <div class="formControls col-xs-8 col-sm-9">
-            <input type="password" class="input-text" value="" placeholder="" minlength="1" maxlength="50" id="password" name="password" required>
+            <input type="password" class="input-text" value="" placeholder="" id="password" name="password" >
         </div>
     </div>
     <div class="row cl">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>确认密码：</label>
         <div class="formControls col-xs-8 col-sm-9">
-            <input type="password" class="input-text" value="" placeholder="" minlength="1" maxlength="50" id="confirmPassword" name="confirmPassword" required>
+            <input type="password" class="input-text" value="" placeholder="" id="confirmPassword" name="confirmPassword">
         </div>
     </div>
     <div class="row cl">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>邮箱：</label>
         <div class="formControls col-xs-8 col-sm-9">
-            <input type="text" class="input-text" value="" placeholder="" minlength="1" maxlength="50" id="email" name="email" required>
+            <input type="text" class="input-text" value="" placeholder="" id="email" name="email">
         </div>
     </div>
     <div class="row cl">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>城市：</label>
         <div class="formControls col-xs-8 col-sm-9">
-            <select class="dropDown" id="city" name="city" required>
+            <select class="dropDown" id="city" name="cityId" required>
                 @foreach (var city in Model.Citys)
                 {
                     <option value="@city.Id">@city.Name</option>
@@ -45,14 +46,14 @@
             </select>
         </div>
     </div>
-    <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>角色：</label>
+   
     <div class="row cl">
-
+        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>角色：</label>
         @foreach (var role in Model.Roles)
         {
-            <div class=" col-xs-4 col-sm-3">
-                <input type="checkbox" class="check-box" value="@role.Id" id="RoleIds_@role.Id" name="RoleIds">
-                <label for="RoleIds_@role.Id" class="form-label">@role.Name</label>
+            <div class="check-box col-xs-4 col-sm-3">
+                <input type="checkbox" value="@role.Id" id="RoleIds_@role.Id" name="RoleIds">
+                <label for="RoleIds_@role.Id">@role.Name</label>
             </div>
         }
 
@@ -66,25 +67,84 @@
 @section FooterScript
 {
     <script>
-        $(function () {
-            $("#saveBtn").click(function () {
-                var formData = $("#addForm").serializeArray();
-                $.ajax({
-                    url: "/AdminUser/Add",
-                    type: "post",
-                    data: formData,
-                    dataType: "json",
-                    success: function (res) {
-                        if (res.status == "ok") {
-                            parent.location.reload();
-                        } else {
-                            alert("error");
-                        }
+        function formValidate() {
+            var result = $("#addForm").validate({
+                rules: {
+                    phonenum: {
+                        required: true,
+                        minlength: 1,
+                        maxlength: 50,
+                        isMobile:true
                     },
-                    error: function (res) {
-                        alert("内部错误");
+                    name: {
+                        required: true,
+                        minlength: 1,
+                        maxlength: 50
+                    },
+                    password: {
+                        required: true,
+                        minlength: 1,
+                        maxlength: 50
+                    },
+                    confirmPassword: {
+                        required: true,
+                        minlength: 1,
+                        maxlength: 50,
+                        equalTo:"#password"
+                    },
+                    email: {
+                        required: true,
+                        email:true
                     }
-                });
+                },
+                onsubmit: true,
+                onfocusout: function (element) { $(element).valid(); },
+                onkeyup: function (element) { $(element).valid(); }
+
+            });
+            return result;
+        }
+        $(function () {
+            formValidate();
+            $("#saveBtn").click(function () {
+                
+                if (formValidate().form()) {
+                    var formData = $("#addForm").serializeArray();
+                    $.ajax({
+                        url: "/AdminUser/Add",
+                        type: "post",
+                        data: formData,
+                        dataType: "json",
+                        success: function (res) {
+                            if (res.status == "ok") {
+                                parent.location.reload();
+                            } else {
+                                alert("error");
+                            }
+                        },
+                        error: function (res) {
+                            alert("内部错误");
+                        }
+                    });
+                }
+                
+            });
+            $("#phonenum").blur(function() {
+                var phone = $("#phonenum").val();
+                if (formValidate().element("#phonenum")) {
+                    $.ajax({
+                        url: "/AdminUser/CheckPhoneNum",
+                        type:"post",
+                        data: { phonenum: phone },
+                        datatype: "json",
+                        success:function(res) {
+                            if (res.status == "exists") {
+                                layer.msg("手机号码已被他人使用");
+                                $("#phonenum").val("");
+                            }
+                        }
+                    });
+                }
             });
 
         });

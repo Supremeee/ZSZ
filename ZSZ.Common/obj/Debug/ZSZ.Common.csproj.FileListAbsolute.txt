@@ -20,6 +20,5 @@ I:\Project\ZSZ\ZSZ.Common\bin\Debug\ZSZ.Common.dll
 I:\Project\ZSZ\ZSZ.Common\bin\Debug\ZSZ.Common.pdb
 I:\Project\ZSZ\ZSZ.Common\bin\Debug\log4net.dll
 I:\Project\ZSZ\ZSZ.Common\bin\Debug\log4net.xml
-I:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.csprojResolveAssemblyReference.cache
 I:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.dll
 I:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.pdb

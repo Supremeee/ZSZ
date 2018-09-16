@@ -1,6 +1,7 @@
 ﻿@model ZSZ.AdminWeb.Models.PermissionEditModel
 @{
     ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutNoNav.cshtml";
 }
 
 
@@ -27,26 +28,49 @@
 @section FooterScript
 {
     <script>
+        function formValidate() {
+            var result = $("#editForm").validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 1,
+                        maxlength: 50
+                    },
+                    description: {
+                        required:true,
+                        minlength: 1,
+                        maxlength: 50
+                    }
+                },
+                onsubmit: true,
+                onfocusout: function (element) { $(element).valid(); },
+                onkeyup: function (element) { $(element).valid(); }
 
+            });
+            return result;
+        }
         $(function () {
             $("#saveBtn").click(function () {
-                var formData = $("#editForm").serializeArray();
-                $.ajax({
-                    url: "/Permission/Edit",
-                    type: "post",
-                    data: formData,
-                    dataType: "json",
-                    success: function (res) {
-                        if (res.status == "ok") {
-                            parent.location.reload();
-                        } else {
-                            alert("error");
+                if (formValidate().form()) {
+                    var formData = $("#editForm").serializeArray();
+                    $.ajax({
+                        url: "/Permission/Edit",
+                        type: "post",
+                        data: formData,
+                        dataType: "json",
+                        success: function (res) {
+                            if (res.status == "ok") {
+                                parent.location.reload();
+                            } else {
+                                alert("error");
+                            }
+                        },
+                        error: function (res) {
+                            alert("内部错误");
                         }
-                    },
-                    error: function (res) {
-                        alert("内部错误");
-                    }
-                });
+                    });
+                }
+                
             });
 
         });

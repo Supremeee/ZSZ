@@ -28,6 +28,10 @@ namespace ZSZ.AdminWeb.Controllers
         [HttpPost]
         public ActionResult Add(PermissionAddModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return Json(new AjaxResult { Status = "error", ErrorMsg = MVCHelper.GetValidMsg(ModelState) });
+            }
             PerSer.AddPermission(model.Name, model.Description);
             return Json(new AjaxResult { Status = "ok" });
         }
@@ -47,6 +51,10 @@ namespace ZSZ.AdminWeb.Controllers
         [HttpPost]
         public ActionResult Edit(PermissionEditModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return Json(new AjaxResult { Status = "error", ErrorMsg = MVCHelper.GetValidMsg(ModelState) });
+            }
             PerSer.UpdatePermission(model.Id, model.Name, model.Description);
             return Json(new AjaxResult { Status = "ok" });
         }

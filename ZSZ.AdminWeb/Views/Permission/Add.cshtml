@@ -1,19 +1,20 @@
 ﻿
 @{
     ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_LayoutNoNav.cshtml";
 }
 
 <form class="form form-horizontal" id="addForm">
     <div class="row cl">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>名称：</label>
         <div class="formControls col-xs-8 col-sm-9">
-            <input type="text" class="input-text" value="" placeholder="" id="name" name="name">
+            <input type="text" class="input-text" value="" placeholder="Controller.Action" id="name" name="name">
         </div>
     </div>
     <div class="row cl">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>描述：</label>
         <div class="formControls col-xs-8 col-sm-9">
-            <input type="text" class="input-text" autocomplete="off" id="description" name="description">
+            <input type="text" class="input-text" autocomplete="off" id="中文描述" name="description">
         </div>
     </div>
     <div class="row cl">
@@ -25,26 +26,46 @@
 @section FooterScript
 {
     <script>
+        function formValidate() {
+            return $("#addForm").validate({
+                rules: {
+                    name: {
+                        required: true,
+                        maxlength: 50
+                    },
+                    description: {
+                        required: true,
+                        maxlength: 50
+                    }
+                },
+                onsubmit: true,
+                onfocusout: function (element) { $(element).valid(); },
+                onkeyup: function (element) { $(element).valid(); }
 
+            });
+        }
         $(function () {
             $("#saveBtn").click(function () {
-                var formData = $("#addForm").serializeArray();
-                $.ajax({
-                    url: "/Permission/Add",
-                    type: "post",
-                    data: formData,
-                    dataType: "json",
-                    success: function (res) {
-                        if (res.status == "ok") {
-                            parent.location.reload();
-                        } else {
-                            alert("error");
+                if (formValidate().form()) {//表单验证通过之后才可以将数据发送给服务器
+                    var formData = $("#addForm").serializeArray();
+                    $.ajax({
+                        url: "/Permission/Add",
+                        type: "post",
+                        data: formData,
+                        dataType: "json",
+                        success: function (res) {
+                            if (res.status == "ok") {
+                                parent.location.reload();
+                            } else {
+                                alert("error");
+                            }
+                        },
+                        error: function (res) {
+                            alert("内部错误");
                         }
-                    },
-                    error: function (res) {
-                        alert("内部错误");
-                    }
-                });
+                    });
+                }
+                
             });
 
         });

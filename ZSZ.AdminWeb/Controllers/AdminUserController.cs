@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ZSZ.AdminWeb.App_Start;
 using ZSZ.AdminWeb.Models;
 using ZSZ.CommonMVC;
 using ZSZ.DTO;
@@ -16,6 +17,7 @@ namespace ZSZ.AdminWeb.Controllers
         public IRoleService RoleService { get; set; }
         public ICityService CityService { get; set; }
         // GET: AdminUser
+        [CheckPermission("AdminUser.List")]
         public ActionResult List()
         {
             var models = AdminUserService.GetAll();
@@ -37,14 +39,34 @@ namespace ZSZ.AdminWeb.Controllers
         [HttpPost]
         public ActionResult Add(AdminUserAddPostModel model)
         {
-            
+            if (!ModelState.IsValid)
+            {
+                return Json(new AjaxResult { Status = "error", ErrorMsg = MVCHelper.GetValidMsg(ModelState) });
+            }
             long? cityId = null;
-            if (model.City != 0)
-                cityId = model.City;
+            if (model.CityId != 0)
+                cityId = model.CityId;
 
             long userId = AdminUserService.AddAdminUser(model.Name, model.PhoneNum, model.Password, model.Email, cityId);
+
             RoleService.AddRoleIds(userId, model.RoleIds);
             return Json(new AjaxResult { Status = "ok" });
+
+        }
+
+        public ActionResult CheckPhoneNum(string phoneNum,long? userId)
+        {
+            bool isOk = false;
+            var user = AdminUserService.GetByPhoneNum(phoneNum);
+            if (userId == null)
+            {
+                isOk = (user == null);
+            }
+            else
+            {
+                isOk = (user==null || user.Id == userId);
+            }
+            return Json(new AjaxResult {Status = isOk ? "ok" : "exists"});
 
         }
         [HttpGet]
@@ -66,12 +88,33 @@ namespace ZSZ.AdminWeb.Controllers
         [HttpPost]
         public ActionResult Edit(AdminUserEditPostModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return Json(new AjaxResult { Status = "error", ErrorMsg = MVCHelper.GetValidMsg(ModelState) });
+            }
             long? cityId = null;
-            if (model.City != 0)
-                cityId = model.City;
+            if (model.CityId != 0)
+                cityId = model.CityId;
 
             AdminUserService.UpdateAdminUser(model.Id, model.Name, model.PhoneNum, model.Password, model.Email, cityId);
+
             RoleService.UpdateRoleIds(model.Id, model.RoleIds);
+            return Json(new AjaxResult { Status = "ok" });
+        }
+        [HttpPost]
+        public ActionResult Delete(long id)
+        {
+            AdminUserService.MarkDeleted(id);
+            return Json(new AjaxResult { Status = "ok" });
+        }
+        [HttpPost]
+        public ActionResult BatchDelete(long[] selectIds)
+        {
+
+            foreach (long id in selectIds)
+            {
+                AdminUserService.MarkDeleted(id);
+            }
             return Json(new AjaxResult { Status = "ok" });
         }
     }

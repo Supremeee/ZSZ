@@ -19,12 +19,16 @@ namespace ZSZ.Service
                 var role = roleBS.GetById(roleId);
                 if (role == null)
                     throw new ArgumentException("roleId不存在 " + roleId);
-                BaseService<PermissionEntity> permissionBS = new BaseService<PermissionEntity>(ctx);
-                var pers = permissionBS.GetAll().Where(u => permIds.Contains(u.Id)).ToArray();
-                foreach (var per in pers)
+                if (permIds != null)
                 {
-                    role.Permissions.Add(per);
+                    BaseService<PermissionEntity> permissionBS = new BaseService<PermissionEntity>(ctx);
+                    var pers = permissionBS.GetAll().Where(u => permIds.Contains(u.Id)).ToArray();
+                    foreach (var per in pers)
+                    {
+                        role.Permissions.Add(per);
+                    }
                 }
+                
                 ctx.SaveChanges();
             }
         }
@@ -102,12 +106,16 @@ namespace ZSZ.Service
                 if (role == null)
                     throw new ArgumentException("roleId不存在 " + roleId);
                 role.Permissions.Clear();
-                BaseService<PermissionEntity> permissionBS = new BaseService<PermissionEntity>(ctx);
-                var pers = permissionBS.GetAll().Where(u => permIds.Contains(u.Id)).ToArray();
-                foreach (var per in pers)
+                if (permIds != null)
                 {
-                    role.Permissions.Add(per);
+                    BaseService<PermissionEntity> permissionBS = new BaseService<PermissionEntity>(ctx);
+                    var pers = permissionBS.GetAll().Where(u => permIds.Contains(u.Id)).ToArray();
+                    foreach (var per in pers)
+                    {
+                        role.Permissions.Add(per);
+                    }
                 }
+                
                 ctx.SaveChanges();
             }
         }

@@ -29,19 +29,23 @@ namespace ZSZ.Service
 
         public void AddRoleIds(long adminUserId, long[] roleIds)
         {
+            
             using (ZSZDbContext ctx = new ZSZDbContext())
             {
                 BaseService<AdminUserEntity> adminBS = new BaseService<AdminUserEntity>(ctx);
                 AdminUserEntity user = adminBS.GetById(adminUserId);
                 if (user == null)
                     throw new ArgumentException("用户不存在" + adminUserId);
-                BaseService<RoleEntity> roleBS = new BaseService<RoleEntity>(ctx);
-                var roles = roleBS.GetAll().Where(u => roleIds.Contains(u.Id)).ToArray();
-                
-                foreach (var role in roles)
+                if (roleIds != null)
                 {
-                    user.Roles.Add(role);
+                    BaseService<RoleEntity> roleBS = new BaseService<RoleEntity>(ctx);
+                    var roles = roleBS.GetAll().Where(u => roleIds.Contains(u.Id)).ToArray();
+                    foreach (var role in roles)
+                    {
+                        user.Roles.Add(role);
+                    }
                 }
+                
                 ctx.SaveChanges();
                 
             }
@@ -131,12 +135,17 @@ namespace ZSZ.Service
                     throw new ArgumentException("用户不存在" + adminUserId);
                 }
                 user.Roles.Clear();
-                BaseService<RoleEntity> roleBS = new BaseService<RoleEntity>(ctx);
-                var roles = roleBS.GetAll().Where(r => roleIds.Contains(r.Id)).ToArray();
-                foreach (var role in roles)
+                if (roleIds != null)
                 {
-                    user.Roles.Add(role);
+                    BaseService<RoleEntity> roleBS = new BaseService<RoleEntity>(ctx);
+
+                    var roles = roleBS.GetAll().Where(r => roleIds.Contains(r.Id)).ToArray();
+                    foreach (var role in roles)
+                    {
+                        user.Roles.Add(role);
+                    }
                 }
+                
                 ctx.SaveChanges();
             }
         }

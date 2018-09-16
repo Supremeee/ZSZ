@@ -295,3 +295,4 @@ I:\Project\ZSZ\ZSZ.AdminWeb\bin\zh-Hans\System.Web.Mvc.resources.dll
 I:\Project\ZSZ\ZSZ.AdminWeb\obj\Debug\ZSZ.AdminWeb.csprojResolveAssemblyReference.cache
 I:\Project\ZSZ\ZSZ.AdminWeb\obj\Debug\ZSZ.AdminWeb.dll
 I:\Project\ZSZ\ZSZ.AdminWeb\obj\Debug\ZSZ.AdminWeb.pdb
+I:\Project\ZSZ\ZSZ.AdminWeb\bin\CaptchaGen.dll

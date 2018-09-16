@@ -51,6 +51,10 @@
     <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.Mvc5.4.0.0\lib\net451\Autofac.Integration.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="CaptchaGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CaptchaGen.1.0.0\lib\net40\CaptchaGen.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -1146,7 +1150,10 @@
     <Content Include="js\_references.js" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\CheckPermissionAttribute.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\ZSZAuthrizationFilter.cs" />
     <Compile Include="App_Start\ZSZExceptionFilter.cs" />
     <Compile Include="Controllers\AdminUserController.cs" />
     <Compile Include="Controllers\MainController.cs" />
@@ -1166,6 +1173,7 @@
     <Compile Include="Models\AdminUserAddPostModel.cs" />
     <Compile Include="Models\AdminUserEditModel.cs" />
     <Compile Include="Models\AdminUserEditPostModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\PermissionAddModel.cs" />
     <Compile Include="Models\PermissionEditModel.cs" />
     <Compile Include="Controllers\RoleController.cs" />
@@ -1213,6 +1221,7 @@
     <Content Include="Views\AdminUser\List.cshtml" />
     <Content Include="Views\AdminUser\Add.cshtml" />
     <Content Include="Views\AdminUser\Edit.cshtml" />
+    <Content Include="Views\Shared\_LayoutNoNav.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

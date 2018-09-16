@@ -1,0 +1,1776 @@
+2018-09-16 13:01:57,159 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:01:57 +08:00
+
+2018-09-16 13:01:57,159 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:01:57 +08:00
+
+2018-09-16 13:01:58,497 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:01:58,497 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:01:58,863 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:01:58,863 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:01:58,865 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:01:58 +08:00
+
+2018-09-16 13:01:58,865 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:01:58 +08:00
+
+2018-09-16 13:01:58,910 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 42 ms with result: SqlDataReader
+
+2018-09-16 13:01:58,910 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 42 ms with result: SqlDataReader
+
+2018-09-16 13:01:58,911 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:01:58,911 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:01:58,966 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:01:58 +08:00
+
+2018-09-16 13:01:58,966 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:01:58 +08:00
+
+2018-09-16 13:02:35,999 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:02:35 +08:00
+
+2018-09-16 13:02:35,999 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:02:35 +08:00
+
+2018-09-16 13:02:36,100 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[T_Permissions] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Name] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-09-16 13:02:36,100 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[T_Permissions] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Name] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-09-16 13:02:36,101 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:02:36,101 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:02:36,106 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '用户列表' (Type = String, Size = 4000)
+
+2018-09-16 13:02:36,106 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '用户列表' (Type = String, Size = 4000)
+
+2018-09-16 13:02:36,108 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,108 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,182 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 72 ms with result: SqlDataReader
+
+2018-09-16 13:02:36,182 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 72 ms with result: SqlDataReader
+
+2018-09-16 13:02:36,183 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:02:36,183 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:02:36,192 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,192 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,280 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,280 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,297 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Started transaction at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,297 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Started transaction at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,451 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:INSERT [dbo].[T_Permissions]([Name], [Description], [CreateDateTime], [IsDeleted])
+VALUES (@0, @1, @2, @3)
+SELECT [Id]
+FROM [dbo].[T_Permissions]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity()
+2018-09-16 13:02:36,451 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:INSERT [dbo].[T_Permissions]([Name], [Description], [CreateDateTime], [IsDeleted])
+VALUES (@0, @1, @2, @3)
+SELECT [Id]
+FROM [dbo].[T_Permissions]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity()
+2018-09-16 13:02:36,453 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:02:36,453 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:02:36,454 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @0: '用户列表' (Type = String, Size = 50)
+
+2018-09-16 13:02:36,454 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @0: '用户列表' (Type = String, Size = 50)
+
+2018-09-16 13:02:36,455 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @1: 'AdminUser.List' (Type = String, Size = 1024)
+
+2018-09-16 13:02:36,455 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @1: 'AdminUser.List' (Type = String, Size = 1024)
+
+2018-09-16 13:02:36,456 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @2: '2018/9/16 13:02:36' (Type = DateTime2)
+
+2018-09-16 13:02:36,456 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @2: '2018/9/16 13:02:36' (Type = DateTime2)
+
+2018-09-16 13:02:36,458 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @3: 'False' (Type = Boolean)
+
+2018-09-16 13:02:36,458 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @3: 'False' (Type = Boolean)
+
+2018-09-16 13:02:36,459 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,459 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,487 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 26 ms with result: SqlDataReader
+
+2018-09-16 13:02:36,487 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 26 ms with result: SqlDataReader
+
+2018-09-16 13:02:36,488 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:02:36,488 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:02:36,512 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Committed transaction at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,512 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Committed transaction at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,514 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,514 [9] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,703 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,703 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,708 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:02:36,708 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:02:36,709 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:02:36,709 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:02:36,711 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,711 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,735 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 22 ms with result: SqlDataReader
+
+2018-09-16 13:02:36,735 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 22 ms with result: SqlDataReader
+
+2018-09-16 13:02:36,738 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:02:36,738 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:02:36,739 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:02:36,739 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:02:36 +08:00
+
+2018-09-16 13:06:10,410 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:10 +08:00
+
+2018-09-16 13:06:10,410 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:10 +08:00
+
+2018-09-16 13:06:10,429 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:06:10,429 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:06:10,431 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:10,431 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:10,432 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:10 +08:00
+
+2018-09-16 13:06:10,432 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:10 +08:00
+
+2018-09-16 13:06:10,452 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 18 ms with result: SqlDataReader
+
+2018-09-16 13:06:10,452 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 18 ms with result: SqlDataReader
+
+2018-09-16 13:06:10,454 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:10,454 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:10,457 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:10 +08:00
+
+2018-09-16 13:06:10,457 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:10 +08:00
+
+2018-09-16 13:06:14,887 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:14 +08:00
+
+2018-09-16 13:06:14,887 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:14 +08:00
+
+2018-09-16 13:06:14,926 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+2018-09-16 13:06:14,926 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+2018-09-16 13:06:14,928 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:14,928 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:14,929 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:06:14,929 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:06:14,931 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:14 +08:00
+
+2018-09-16 13:06:14,931 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:14 +08:00
+
+2018-09-16 13:06:14,978 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 46 ms with result: SqlDataReader
+
+2018-09-16 13:06:14,978 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 46 ms with result: SqlDataReader
+
+2018-09-16 13:06:14,980 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:14,980 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:14,981 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:14 +08:00
+
+2018-09-16 13:06:14,981 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:14 +08:00
+
+2018-09-16 13:06:14,985 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:14 +08:00
+
+2018-09-16 13:06:14,985 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:14 +08:00
+
+2018-09-16 13:06:14,988 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:06:14,988 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:06:14,990 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:14,990 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:14,991 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:14 +08:00
+
+2018-09-16 13:06:14,991 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:14 +08:00
+
+2018-09-16 13:06:15,021 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 28 ms with result: SqlDataReader
+
+2018-09-16 13:06:15,021 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 28 ms with result: SqlDataReader
+
+2018-09-16 13:06:15,023 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:15,023 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:15,025 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:15,025 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:15,029 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:15,029 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:15,031 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+2018-09-16 13:06:15,031 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+2018-09-16 13:06:15,033 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:15,033 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:15,036 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:06:15,036 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:06:15,043 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:15,043 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:15,080 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 35 ms with result: SqlDataReader
+
+2018-09-16 13:06:15,080 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 35 ms with result: SqlDataReader
+
+2018-09-16 13:06:15,082 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:15,082 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:15,083 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:15,083 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:15,106 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:15,106 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:15,366 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:06:15,366 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:06:15,369 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:15,369 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:15,373 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:06:15,373 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:06:15,379 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:15,379 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:15,440 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 59 ms with result: SqlDataReader
+
+2018-09-16 13:06:15,440 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 59 ms with result: SqlDataReader
+
+2018-09-16 13:06:15,442 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:15,442 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:15,445 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:15,445 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:15 +08:00
+
+2018-09-16 13:06:19,179 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,179 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,190 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[T_Roles] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Name] = @p__linq__0) AND ([Extent1].[Id] <> @p__linq__1)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-09-16 13:06:19,190 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[T_Roles] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Name] = @p__linq__0) AND ([Extent1].[Id] <> @p__linq__1)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-09-16 13:06:19,191 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,191 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,192 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '管理员' (Type = String, Size = 4000)
+
+2018-09-16 13:06:19,192 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '管理员' (Type = String, Size = 4000)
+
+2018-09-16 13:06:19,193 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:06:19,193 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:06:19,195 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,195 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,218 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 23 ms with result: SqlDataReader
+
+2018-09-16 13:06:19,218 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 23 ms with result: SqlDataReader
+
+2018-09-16 13:06:19,219 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,219 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,221 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,221 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,237 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,237 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,239 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Started transaction at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,239 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Started transaction at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,250 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:UPDATE [dbo].[T_Roles]
+SET [Name] = @0
+WHERE ([Id] = @1)
+
+2018-09-16 13:06:19,250 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:UPDATE [dbo].[T_Roles]
+SET [Name] = @0
+WHERE ([Id] = @1)
+
+2018-09-16 13:06:19,252 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @0: '管理员' (Type = String, Size = 60)
+
+2018-09-16 13:06:19,252 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @0: '管理员' (Type = String, Size = 60)
+
+2018-09-16 13:06:19,254 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @1: '1' (Type = Int64)
+
+2018-09-16 13:06:19,254 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @1: '1' (Type = Int64)
+
+2018-09-16 13:06:19,255 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,255 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,281 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 23 ms with result: 1
+
+2018-09-16 13:06:19,281 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 23 ms with result: 1
+
+2018-09-16 13:06:19,282 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,282 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,284 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Committed transaction at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,284 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Committed transaction at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,285 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,285 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,289 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,289 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,290 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+2018-09-16 13:06:19,290 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+2018-09-16 13:06:19,292 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,292 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,293 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:06:19,293 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:06:19,294 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,294 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,322 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 26 ms with result: SqlDataReader
+
+2018-09-16 13:06:19,322 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 26 ms with result: SqlDataReader
+
+2018-09-16 13:06:19,323 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,323 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,325 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,325 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,326 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,326 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,329 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:06:19,329 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:06:19,331 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,331 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,332 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:06:19,332 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:06:19,334 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,334 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,357 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 21 ms with result: SqlDataReader
+
+2018-09-16 13:06:19,357 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 21 ms with result: SqlDataReader
+
+2018-09-16 13:06:19,359 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,359 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,360 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,360 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,362 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,362 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,375 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] IN (cast(1 as bigint), cast(2 as bigint), cast(3 as bigint)))
+2018-09-16 13:06:19,375 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] IN (cast(1 as bigint), cast(2 as bigint), cast(3 as bigint)))
+2018-09-16 13:06:19,376 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,376 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,378 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,378 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,401 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 21 ms with result: SqlDataReader
+
+2018-09-16 13:06:19,401 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 21 ms with result: SqlDataReader
+
+2018-09-16 13:06:19,402 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,402 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,405 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,405 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,411 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,411 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,412 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Started transaction at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,412 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Started transaction at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,430 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:INSERT [dbo].[T_RolePermissions]([RoleId], [PermissionId])
+VALUES (@0, @1)
+
+2018-09-16 13:06:19,430 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:INSERT [dbo].[T_RolePermissions]([RoleId], [PermissionId])
+VALUES (@0, @1)
+
+2018-09-16 13:06:19,431 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @0: '1' (Type = Int64)
+
+2018-09-16 13:06:19,431 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @0: '1' (Type = Int64)
+
+2018-09-16 13:06:19,433 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @1: '3' (Type = Int64)
+
+2018-09-16 13:06:19,433 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- @1: '3' (Type = Int64)
+
+2018-09-16 13:06:19,434 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,434 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,454 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 18 ms with result: 1
+
+2018-09-16 13:06:19,454 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 18 ms with result: 1
+
+2018-09-16 13:06:19,455 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,455 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,457 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Committed transaction at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,457 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Committed transaction at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,459 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,459 [8] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,488 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,488 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,491 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:06:19,491 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:06:19,493 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,493 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,494 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,494 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,516 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 20 ms with result: SqlDataReader
+
+2018-09-16 13:06:19,516 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 20 ms with result: SqlDataReader
+
+2018-09-16 13:06:19,518 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,518 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:06:19,521 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:06:19,521 [10] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:06:19 +08:00
+
+2018-09-16 13:08:35,002 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:08:34 +08:00
+
+2018-09-16 13:08:35,002 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:08:34 +08:00
+
+2018-09-16 13:08:36,464 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[PasswordHash] AS [PasswordHash], 
+    [Extent1].[PasswordSalt] AS [PasswordSalt], 
+    [Extent1].[PhoneNum] AS [PhoneNum], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[CityId] AS [CityId], 
+    [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Extent1].[LastErrorDateTime] AS [LastErrorDateTime], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_AdminUsers] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[PhoneNum] = @p__linq__0)
+2018-09-16 13:08:36,464 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[PasswordHash] AS [PasswordHash], 
+    [Extent1].[PasswordSalt] AS [PasswordSalt], 
+    [Extent1].[PhoneNum] AS [PhoneNum], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[CityId] AS [CityId], 
+    [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Extent1].[LastErrorDateTime] AS [LastErrorDateTime], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_AdminUsers] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[PhoneNum] = @p__linq__0)
+2018-09-16 13:08:36,466 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:08:36,466 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:08:36,473 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '18397776538' (Type = AnsiString, Size = 8000)
+
+2018-09-16 13:08:36,473 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '18397776538' (Type = AnsiString, Size = 8000)
+
+2018-09-16 13:08:36,475 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:08:36 +08:00
+
+2018-09-16 13:08:36,475 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:08:36 +08:00
+
+2018-09-16 13:08:36,519 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 40 ms with result: SqlDataReader
+
+2018-09-16 13:08:36,519 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 40 ms with result: SqlDataReader
+
+2018-09-16 13:08:36,521 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:08:36,521 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:08:36,604 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:08:36 +08:00
+
+2018-09-16 13:08:36,604 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:08:36 +08:00
+
+2018-09-16 13:08:36,620 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:08:36 +08:00
+
+2018-09-16 13:08:36,620 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:08:36 +08:00
+
+2018-09-16 13:08:36,753 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_AdminUsers] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[PhoneNum] = @p__linq__0)
+    )  AS [GroupBy1]
+2018-09-16 13:08:36,753 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_AdminUsers] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[PhoneNum] = @p__linq__0)
+    )  AS [GroupBy1]
+2018-09-16 13:08:36,755 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:08:36,755 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:08:36,756 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '18397776538' (Type = AnsiString, Size = 8000)
+
+2018-09-16 13:08:36,756 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '18397776538' (Type = AnsiString, Size = 8000)
+
+2018-09-16 13:08:36,757 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:08:36 +08:00
+
+2018-09-16 13:08:36,757 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:08:36 +08:00
+
+2018-09-16 13:08:36,791 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 32 ms with result: SqlDataReader
+
+2018-09-16 13:08:36,791 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 32 ms with result: SqlDataReader
+
+2018-09-16 13:08:36,793 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:08:36,793 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:08:36,800 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:08:36 +08:00
+
+2018-09-16 13:08:36,800 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:08:36 +08:00
+
+2018-09-16 13:08:36,811 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:08:36 +08:00
+
+2018-09-16 13:08:36,811 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:08:36 +08:00
+
+2018-09-16 13:08:36,995 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Limit1].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Limit1].[Id] AS [Id], 
+    [Limit1].[Name] AS [Name], 
+    [Limit1].[PasswordHash] AS [PasswordHash], 
+    [Limit1].[PasswordSalt] AS [PasswordSalt], 
+    [Limit1].[PhoneNum] AS [PhoneNum], 
+    [Limit1].[Email] AS [Email], 
+    [Limit1].[CityId] AS [CityId], 
+    [Limit1].[LastErrorDateTime] AS [LastErrorDateTime], 
+    [Limit1].[CreateDateTime] AS [CreateDateTime], 
+    [Limit1].[IsDeleted] AS [IsDeleted], 
+    [Limit1].[Id1] AS [Id1], 
+    [Limit1].[Name1] AS [Name1], 
+    [Limit1].[CreateDateTime1] AS [CreateDateTime1], 
+    [Limit1].[IsDeleted1] AS [IsDeleted1]
+    FROM ( SELECT TOP (2) 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PhoneNum] AS [PhoneNum], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[CityId] AS [CityId], 
+        [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+        [Extent1].[LastErrorDateTime] AS [LastErrorDateTime], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Name] AS [Name1], 
+        [Extent2].[CreateDateTime] AS [CreateDateTime1], 
+        [Extent2].[IsDeleted] AS [IsDeleted1]
+        FROM  [dbo].[T_AdminUsers] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[T_Cities] AS [Extent2] ON [Extent1].[CityId] = [Extent2].[Id]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[PhoneNum] = @p__linq__0)
+    )  AS [Limit1]
+2018-09-16 13:08:36,995 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Limit1].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Limit1].[Id] AS [Id], 
+    [Limit1].[Name] AS [Name], 
+    [Limit1].[PasswordHash] AS [PasswordHash], 
+    [Limit1].[PasswordSalt] AS [PasswordSalt], 
+    [Limit1].[PhoneNum] AS [PhoneNum], 
+    [Limit1].[Email] AS [Email], 
+    [Limit1].[CityId] AS [CityId], 
+    [Limit1].[LastErrorDateTime] AS [LastErrorDateTime], 
+    [Limit1].[CreateDateTime] AS [CreateDateTime], 
+    [Limit1].[IsDeleted] AS [IsDeleted], 
+    [Limit1].[Id1] AS [Id1], 
+    [Limit1].[Name1] AS [Name1], 
+    [Limit1].[CreateDateTime1] AS [CreateDateTime1], 
+    [Limit1].[IsDeleted1] AS [IsDeleted1]
+    FROM ( SELECT TOP (2) 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[PhoneNum] AS [PhoneNum], 
+        [Extent1].[Email] AS [Email], 
+        [Extent1].[CityId] AS [CityId], 
+        [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+        [Extent1].[LastErrorDateTime] AS [LastErrorDateTime], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Name] AS [Name1], 
+        [Extent2].[CreateDateTime] AS [CreateDateTime1], 
+        [Extent2].[IsDeleted] AS [IsDeleted1]
+        FROM  [dbo].[T_AdminUsers] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[T_Cities] AS [Extent2] ON [Extent1].[CityId] = [Extent2].[Id]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[PhoneNum] = @p__linq__0)
+    )  AS [Limit1]
+2018-09-16 13:08:36,997 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:08:36,997 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:08:36,999 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '18397776538' (Type = AnsiString, Size = 8000)
+
+2018-09-16 13:08:36,999 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '18397776538' (Type = AnsiString, Size = 8000)
+
+2018-09-16 13:08:37,000 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:08:37 +08:00
+
+2018-09-16 13:08:37,000 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:08:37 +08:00
+
+2018-09-16 13:08:37,027 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 25 ms with result: SqlDataReader
+
+2018-09-16 13:08:37,027 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 25 ms with result: SqlDataReader
+
+2018-09-16 13:08:37,029 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:08:37,029 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:08:37,037 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:08:37 +08:00
+
+2018-09-16 13:08:37,037 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:08:37 +08:00
+
+2018-09-16 13:09:08,009 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,009 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,173 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Project2].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Name] AS [Name], 
+    [Project2].[PasswordHash] AS [PasswordHash], 
+    [Project2].[PasswordSalt] AS [PasswordSalt], 
+    [Project2].[PhoneNum] AS [PhoneNum], 
+    [Project2].[Email] AS [Email], 
+    [Project2].[CityId] AS [CityId], 
+    [Project2].[LastErrorDateTime] AS [LastErrorDateTime], 
+    [Project2].[CreateDateTime] AS [CreateDateTime], 
+    [Project2].[IsDeleted] AS [IsDeleted], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[Id1] AS [Id1], 
+    [Project2].[Name1] AS [Name1], 
+    [Project2].[CreateDateTime1] AS [CreateDateTime1], 
+    [Project2].[IsDeleted1] AS [IsDeleted1]
+    FROM ( SELECT 
+        [Limit1].[Id] AS [Id], 
+        [Limit1].[Name] AS [Name], 
+        [Limit1].[PasswordHash] AS [PasswordHash], 
+        [Limit1].[PasswordSalt] AS [PasswordSalt], 
+        [Limit1].[PhoneNum] AS [PhoneNum], 
+        [Limit1].[Email] AS [Email], 
+        [Limit1].[CityId] AS [CityId], 
+        [Limit1].[LoginErrorTimes] AS [LoginErrorTimes], 
+        [Limit1].[LastErrorDateTime] AS [LastErrorDateTime], 
+        [Limit1].[CreateDateTime] AS [CreateDateTime], 
+        [Limit1].[IsDeleted] AS [IsDeleted], 
+        [Join1].[Id] AS [Id1], 
+        [Join1].[Name] AS [Name1], 
+        [Join1].[CreateDateTime] AS [CreateDateTime1], 
+        [Join1].[IsDeleted] AS [IsDeleted1], 
+        CASE WHEN ([Join1].[AdminUserId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM   (SELECT TOP (2) 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[PasswordHash] AS [PasswordHash], 
+            [Extent1].[PasswordSalt] AS [PasswordSalt], 
+            [Extent1].[PhoneNum] AS [PhoneNum], 
+            [Extent1].[Email] AS [Email], 
+            [Extent1].[CityId] AS [CityId], 
+            [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+            [Extent1].[LastErrorDateTime] AS [LastErrorDateTime], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            [Extent1].[IsDeleted] AS [IsDeleted]
+            FROM [dbo].[T_AdminUsers] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) ) AS [Limit1]
+        LEFT OUTER JOIN  (SELECT [Extent2].[AdminUserId] AS [AdminUserId], [Extent3].[Id] AS [Id], [Extent3].[Name] AS [Name], [Extent3].[CreateDateTime] AS [CreateDateTime], [Extent3].[IsDeleted] AS [IsDeleted]
+            FROM  [dbo].[T_AdminUserRoles] AS [Extent2]
+            INNER JOIN [dbo].[T_Roles] AS [Extent3] ON [Extent3].[Id] = [Extent2].[RoleId] ) AS [Join1] ON [Limit1].[Id] = [Join1].[AdminUserId]
+    )  AS [Project2]
+    ORDER BY [Project2].[Id] ASC, [Project2].[C1] ASC
+2018-09-16 13:09:08,173 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Project2].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Name] AS [Name], 
+    [Project2].[PasswordHash] AS [PasswordHash], 
+    [Project2].[PasswordSalt] AS [PasswordSalt], 
+    [Project2].[PhoneNum] AS [PhoneNum], 
+    [Project2].[Email] AS [Email], 
+    [Project2].[CityId] AS [CityId], 
+    [Project2].[LastErrorDateTime] AS [LastErrorDateTime], 
+    [Project2].[CreateDateTime] AS [CreateDateTime], 
+    [Project2].[IsDeleted] AS [IsDeleted], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[Id1] AS [Id1], 
+    [Project2].[Name1] AS [Name1], 
+    [Project2].[CreateDateTime1] AS [CreateDateTime1], 
+    [Project2].[IsDeleted1] AS [IsDeleted1]
+    FROM ( SELECT 
+        [Limit1].[Id] AS [Id], 
+        [Limit1].[Name] AS [Name], 
+        [Limit1].[PasswordHash] AS [PasswordHash], 
+        [Limit1].[PasswordSalt] AS [PasswordSalt], 
+        [Limit1].[PhoneNum] AS [PhoneNum], 
+        [Limit1].[Email] AS [Email], 
+        [Limit1].[CityId] AS [CityId], 
+        [Limit1].[LoginErrorTimes] AS [LoginErrorTimes], 
+        [Limit1].[LastErrorDateTime] AS [LastErrorDateTime], 
+        [Limit1].[CreateDateTime] AS [CreateDateTime], 
+        [Limit1].[IsDeleted] AS [IsDeleted], 
+        [Join1].[Id] AS [Id1], 
+        [Join1].[Name] AS [Name1], 
+        [Join1].[CreateDateTime] AS [CreateDateTime1], 
+        [Join1].[IsDeleted] AS [IsDeleted1], 
+        CASE WHEN ([Join1].[AdminUserId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM   (SELECT TOP (2) 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[PasswordHash] AS [PasswordHash], 
+            [Extent1].[PasswordSalt] AS [PasswordSalt], 
+            [Extent1].[PhoneNum] AS [PhoneNum], 
+            [Extent1].[Email] AS [Email], 
+            [Extent1].[CityId] AS [CityId], 
+            [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+            [Extent1].[LastErrorDateTime] AS [LastErrorDateTime], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            [Extent1].[IsDeleted] AS [IsDeleted]
+            FROM [dbo].[T_AdminUsers] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) ) AS [Limit1]
+        LEFT OUTER JOIN  (SELECT [Extent2].[AdminUserId] AS [AdminUserId], [Extent3].[Id] AS [Id], [Extent3].[Name] AS [Name], [Extent3].[CreateDateTime] AS [CreateDateTime], [Extent3].[IsDeleted] AS [IsDeleted]
+            FROM  [dbo].[T_AdminUserRoles] AS [Extent2]
+            INNER JOIN [dbo].[T_Roles] AS [Extent3] ON [Extent3].[Id] = [Extent2].[RoleId] ) AS [Join1] ON [Limit1].[Id] = [Join1].[AdminUserId]
+    )  AS [Project2]
+    ORDER BY [Project2].[Id] ASC, [Project2].[C1] ASC
+2018-09-16 13:09:08,174 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:08,174 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:08,176 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '2' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:09:08,176 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '2' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:09:08,178 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,178 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,204 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 23 ms with result: SqlDataReader
+
+2018-09-16 13:09:08,204 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 23 ms with result: SqlDataReader
+
+2018-09-16 13:09:08,205 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:08,205 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:08,265 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,265 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,294 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,294 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,366 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:09:08,366 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:09:08,369 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:08,369 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:08,370 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:09:08,370 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:09:08,371 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,371 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,399 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 25 ms with result: SqlDataReader
+
+2018-09-16 13:09:08,399 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 25 ms with result: SqlDataReader
+
+2018-09-16 13:09:08,400 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:08,400 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:08,405 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,405 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,409 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,409 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,411 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:09:08,411 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:09:08,459 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:08,459 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:08,460 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '2' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:09:08,460 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '2' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:09:08,463 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,463 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,498 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 32 ms with result: SqlDataReader
+
+2018-09-16 13:09:08,498 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 32 ms with result: SqlDataReader
+
+2018-09-16 13:09:08,500 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:08,500 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:08,502 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:08,502 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:09:08 +08:00
+
+2018-09-16 13:09:45,693 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,693 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,696 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Project2].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Name] AS [Name], 
+    [Project2].[PasswordHash] AS [PasswordHash], 
+    [Project2].[PasswordSalt] AS [PasswordSalt], 
+    [Project2].[PhoneNum] AS [PhoneNum], 
+    [Project2].[Email] AS [Email], 
+    [Project2].[CityId] AS [CityId], 
+    [Project2].[LastErrorDateTime] AS [LastErrorDateTime], 
+    [Project2].[CreateDateTime] AS [CreateDateTime], 
+    [Project2].[IsDeleted] AS [IsDeleted], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[Id1] AS [Id1], 
+    [Project2].[Name1] AS [Name1], 
+    [Project2].[CreateDateTime1] AS [CreateDateTime1], 
+    [Project2].[IsDeleted1] AS [IsDeleted1]
+    FROM ( SELECT 
+        [Limit1].[Id] AS [Id], 
+        [Limit1].[Name] AS [Name], 
+        [Limit1].[PasswordHash] AS [PasswordHash], 
+        [Limit1].[PasswordSalt] AS [PasswordSalt], 
+        [Limit1].[PhoneNum] AS [PhoneNum], 
+        [Limit1].[Email] AS [Email], 
+        [Limit1].[CityId] AS [CityId], 
+        [Limit1].[LoginErrorTimes] AS [LoginErrorTimes], 
+        [Limit1].[LastErrorDateTime] AS [LastErrorDateTime], 
+        [Limit1].[CreateDateTime] AS [CreateDateTime], 
+        [Limit1].[IsDeleted] AS [IsDeleted], 
+        [Join1].[Id] AS [Id1], 
+        [Join1].[Name] AS [Name1], 
+        [Join1].[CreateDateTime] AS [CreateDateTime1], 
+        [Join1].[IsDeleted] AS [IsDeleted1], 
+        CASE WHEN ([Join1].[AdminUserId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM   (SELECT TOP (2) 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[PasswordHash] AS [PasswordHash], 
+            [Extent1].[PasswordSalt] AS [PasswordSalt], 
+            [Extent1].[PhoneNum] AS [PhoneNum], 
+            [Extent1].[Email] AS [Email], 
+            [Extent1].[CityId] AS [CityId], 
+            [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+            [Extent1].[LastErrorDateTime] AS [LastErrorDateTime], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            [Extent1].[IsDeleted] AS [IsDeleted]
+            FROM [dbo].[T_AdminUsers] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) ) AS [Limit1]
+        LEFT OUTER JOIN  (SELECT [Extent2].[AdminUserId] AS [AdminUserId], [Extent3].[Id] AS [Id], [Extent3].[Name] AS [Name], [Extent3].[CreateDateTime] AS [CreateDateTime], [Extent3].[IsDeleted] AS [IsDeleted]
+            FROM  [dbo].[T_AdminUserRoles] AS [Extent2]
+            INNER JOIN [dbo].[T_Roles] AS [Extent3] ON [Extent3].[Id] = [Extent2].[RoleId] ) AS [Join1] ON [Limit1].[Id] = [Join1].[AdminUserId]
+    )  AS [Project2]
+    ORDER BY [Project2].[Id] ASC, [Project2].[C1] ASC
+2018-09-16 13:09:45,696 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Project2].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Name] AS [Name], 
+    [Project2].[PasswordHash] AS [PasswordHash], 
+    [Project2].[PasswordSalt] AS [PasswordSalt], 
+    [Project2].[PhoneNum] AS [PhoneNum], 
+    [Project2].[Email] AS [Email], 
+    [Project2].[CityId] AS [CityId], 
+    [Project2].[LastErrorDateTime] AS [LastErrorDateTime], 
+    [Project2].[CreateDateTime] AS [CreateDateTime], 
+    [Project2].[IsDeleted] AS [IsDeleted], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[Id1] AS [Id1], 
+    [Project2].[Name1] AS [Name1], 
+    [Project2].[CreateDateTime1] AS [CreateDateTime1], 
+    [Project2].[IsDeleted1] AS [IsDeleted1]
+    FROM ( SELECT 
+        [Limit1].[Id] AS [Id], 
+        [Limit1].[Name] AS [Name], 
+        [Limit1].[PasswordHash] AS [PasswordHash], 
+        [Limit1].[PasswordSalt] AS [PasswordSalt], 
+        [Limit1].[PhoneNum] AS [PhoneNum], 
+        [Limit1].[Email] AS [Email], 
+        [Limit1].[CityId] AS [CityId], 
+        [Limit1].[LoginErrorTimes] AS [LoginErrorTimes], 
+        [Limit1].[LastErrorDateTime] AS [LastErrorDateTime], 
+        [Limit1].[CreateDateTime] AS [CreateDateTime], 
+        [Limit1].[IsDeleted] AS [IsDeleted], 
+        [Join1].[Id] AS [Id1], 
+        [Join1].[Name] AS [Name1], 
+        [Join1].[CreateDateTime] AS [CreateDateTime1], 
+        [Join1].[IsDeleted] AS [IsDeleted1], 
+        CASE WHEN ([Join1].[AdminUserId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM   (SELECT TOP (2) 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[PasswordHash] AS [PasswordHash], 
+            [Extent1].[PasswordSalt] AS [PasswordSalt], 
+            [Extent1].[PhoneNum] AS [PhoneNum], 
+            [Extent1].[Email] AS [Email], 
+            [Extent1].[CityId] AS [CityId], 
+            [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+            [Extent1].[LastErrorDateTime] AS [LastErrorDateTime], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            [Extent1].[IsDeleted] AS [IsDeleted]
+            FROM [dbo].[T_AdminUsers] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) ) AS [Limit1]
+        LEFT OUTER JOIN  (SELECT [Extent2].[AdminUserId] AS [AdminUserId], [Extent3].[Id] AS [Id], [Extent3].[Name] AS [Name], [Extent3].[CreateDateTime] AS [CreateDateTime], [Extent3].[IsDeleted] AS [IsDeleted]
+            FROM  [dbo].[T_AdminUserRoles] AS [Extent2]
+            INNER JOIN [dbo].[T_Roles] AS [Extent3] ON [Extent3].[Id] = [Extent2].[RoleId] ) AS [Join1] ON [Limit1].[Id] = [Join1].[AdminUserId]
+    )  AS [Project2]
+    ORDER BY [Project2].[Id] ASC, [Project2].[C1] ASC
+2018-09-16 13:09:45,733 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:45,733 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:45,736 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '2' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:09:45,736 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '2' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:09:45,737 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,737 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,755 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 16 ms with result: SqlDataReader
+
+2018-09-16 13:09:45,755 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 16 ms with result: SqlDataReader
+
+2018-09-16 13:09:45,756 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:45,756 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:45,758 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,758 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,760 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,760 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,761 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:09:45,761 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:09:45,762 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:45,762 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:45,763 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:09:45,763 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:09:45,765 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,765 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,782 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 16 ms with result: SqlDataReader
+
+2018-09-16 13:09:45,782 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 16 ms with result: SqlDataReader
+
+2018-09-16 13:09:45,784 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:45,784 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:45,785 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,785 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,787 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,787 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,788 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:09:45,788 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:09:45,790 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:45,790 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:45,791 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '2' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:09:45,791 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '2' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:09:45,792 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,792 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,810 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 16 ms with result: SqlDataReader
+
+2018-09-16 13:09:45,810 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 16 ms with result: SqlDataReader
+
+2018-09-16 13:09:45,812 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:45,812 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:09:45,813 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:09:45,813 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:09:45 +08:00
+
+2018-09-16 13:10:01,440 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:10:01 +08:00
+
+2018-09-16 13:10:01,440 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:10:01 +08:00
+
+2018-09-16 13:10:01,457 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:10:01,457 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:10:01,459 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:01,459 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:01,468 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:10:01 +08:00
+
+2018-09-16 13:10:01,468 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:10:01 +08:00
+
+2018-09-16 13:10:01,502 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 32 ms with result: SqlDataReader
+
+2018-09-16 13:10:01,502 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 32 ms with result: SqlDataReader
+
+2018-09-16 13:10:01,504 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:01,504 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:01,507 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:10:01 +08:00
+
+2018-09-16 13:10:01,507 [7] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:10:01 +08:00
+
+2018-09-16 13:10:07,130 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,130 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,134 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+2018-09-16 13:10:07,134 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+2018-09-16 13:10:07,137 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,137 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,138 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:10:07,138 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:10:07,140 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,140 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,165 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 23 ms with result: SqlDataReader
+
+2018-09-16 13:10:07,165 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 23 ms with result: SqlDataReader
+
+2018-09-16 13:10:07,170 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,170 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,171 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,171 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,175 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,175 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,188 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:10:07,188 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:10:07,190 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,190 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,191 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,191 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,226 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 34 ms with result: SqlDataReader
+
+2018-09-16 13:10:07,226 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 34 ms with result: SqlDataReader
+
+2018-09-16 13:10:07,228 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,228 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,232 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,232 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,235 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,235 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,237 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+2018-09-16 13:10:07,237 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0)
+2018-09-16 13:10:07,239 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,239 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,240 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:10:07,240 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:10:07,241 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,241 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,260 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 17 ms with result: SqlDataReader
+
+2018-09-16 13:10:07,260 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 17 ms with result: SqlDataReader
+
+2018-09-16 13:10:07,262 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,262 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,264 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,264 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,270 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,270 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,274 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:10:07,274 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:10:07,276 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,276 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,277 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:10:07,277 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:10:07,278 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,278 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,312 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 32 ms with result: SqlDataReader
+
+2018-09-16 13:10:07,312 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 32 ms with result: SqlDataReader
+
+2018-09-16 13:10:07,314 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,314 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:10:07,315 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:10:07,315 [6] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:10:07 +08:00
+
+2018-09-16 13:16:38,333 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:16:38 +08:00
+
+2018-09-16 13:16:38,333 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:16:38 +08:00
+
+2018-09-16 13:16:38,337 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Project2].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Name] AS [Name], 
+    [Project2].[PasswordHash] AS [PasswordHash], 
+    [Project2].[PasswordSalt] AS [PasswordSalt], 
+    [Project2].[PhoneNum] AS [PhoneNum], 
+    [Project2].[Email] AS [Email], 
+    [Project2].[CityId] AS [CityId], 
+    [Project2].[LastErrorDateTime] AS [LastErrorDateTime], 
+    [Project2].[CreateDateTime] AS [CreateDateTime], 
+    [Project2].[IsDeleted] AS [IsDeleted], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[Id1] AS [Id1], 
+    [Project2].[Name1] AS [Name1], 
+    [Project2].[CreateDateTime1] AS [CreateDateTime1], 
+    [Project2].[IsDeleted1] AS [IsDeleted1]
+    FROM ( SELECT 
+        [Limit1].[Id] AS [Id], 
+        [Limit1].[Name] AS [Name], 
+        [Limit1].[PasswordHash] AS [PasswordHash], 
+        [Limit1].[PasswordSalt] AS [PasswordSalt], 
+        [Limit1].[PhoneNum] AS [PhoneNum], 
+        [Limit1].[Email] AS [Email], 
+        [Limit1].[CityId] AS [CityId], 
+        [Limit1].[LoginErrorTimes] AS [LoginErrorTimes], 
+        [Limit1].[LastErrorDateTime] AS [LastErrorDateTime], 
+        [Limit1].[CreateDateTime] AS [CreateDateTime], 
+        [Limit1].[IsDeleted] AS [IsDeleted], 
+        [Join1].[Id] AS [Id1], 
+        [Join1].[Name] AS [Name1], 
+        [Join1].[CreateDateTime] AS [CreateDateTime1], 
+        [Join1].[IsDeleted] AS [IsDeleted1], 
+        CASE WHEN ([Join1].[AdminUserId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM   (SELECT TOP (2) 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[PasswordHash] AS [PasswordHash], 
+            [Extent1].[PasswordSalt] AS [PasswordSalt], 
+            [Extent1].[PhoneNum] AS [PhoneNum], 
+            [Extent1].[Email] AS [Email], 
+            [Extent1].[CityId] AS [CityId], 
+            [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+            [Extent1].[LastErrorDateTime] AS [LastErrorDateTime], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            [Extent1].[IsDeleted] AS [IsDeleted]
+            FROM [dbo].[T_AdminUsers] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) ) AS [Limit1]
+        LEFT OUTER JOIN  (SELECT [Extent2].[AdminUserId] AS [AdminUserId], [Extent3].[Id] AS [Id], [Extent3].[Name] AS [Name], [Extent3].[CreateDateTime] AS [CreateDateTime], [Extent3].[IsDeleted] AS [IsDeleted]
+            FROM  [dbo].[T_AdminUserRoles] AS [Extent2]
+            INNER JOIN [dbo].[T_Roles] AS [Extent3] ON [Extent3].[Id] = [Extent2].[RoleId] ) AS [Join1] ON [Limit1].[Id] = [Join1].[AdminUserId]
+    )  AS [Project2]
+    ORDER BY [Project2].[Id] ASC, [Project2].[C1] ASC
+2018-09-16 13:16:38,337 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Project2].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Name] AS [Name], 
+    [Project2].[PasswordHash] AS [PasswordHash], 
+    [Project2].[PasswordSalt] AS [PasswordSalt], 
+    [Project2].[PhoneNum] AS [PhoneNum], 
+    [Project2].[Email] AS [Email], 
+    [Project2].[CityId] AS [CityId], 
+    [Project2].[LastErrorDateTime] AS [LastErrorDateTime], 
+    [Project2].[CreateDateTime] AS [CreateDateTime], 
+    [Project2].[IsDeleted] AS [IsDeleted], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[Id1] AS [Id1], 
+    [Project2].[Name1] AS [Name1], 
+    [Project2].[CreateDateTime1] AS [CreateDateTime1], 
+    [Project2].[IsDeleted1] AS [IsDeleted1]
+    FROM ( SELECT 
+        [Limit1].[Id] AS [Id], 
+        [Limit1].[Name] AS [Name], 
+        [Limit1].[PasswordHash] AS [PasswordHash], 
+        [Limit1].[PasswordSalt] AS [PasswordSalt], 
+        [Limit1].[PhoneNum] AS [PhoneNum], 
+        [Limit1].[Email] AS [Email], 
+        [Limit1].[CityId] AS [CityId], 
+        [Limit1].[LoginErrorTimes] AS [LoginErrorTimes], 
+        [Limit1].[LastErrorDateTime] AS [LastErrorDateTime], 
+        [Limit1].[CreateDateTime] AS [CreateDateTime], 
+        [Limit1].[IsDeleted] AS [IsDeleted], 
+        [Join1].[Id] AS [Id1], 
+        [Join1].[Name] AS [Name1], 
+        [Join1].[CreateDateTime] AS [CreateDateTime1], 
+        [Join1].[IsDeleted] AS [IsDeleted1], 
+        CASE WHEN ([Join1].[AdminUserId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM   (SELECT TOP (2) 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[PasswordHash] AS [PasswordHash], 
+            [Extent1].[PasswordSalt] AS [PasswordSalt], 
+            [Extent1].[PhoneNum] AS [PhoneNum], 
+            [Extent1].[Email] AS [Email], 
+            [Extent1].[CityId] AS [CityId], 
+            [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+            [Extent1].[LastErrorDateTime] AS [LastErrorDateTime], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            [Extent1].[IsDeleted] AS [IsDeleted]
+            FROM [dbo].[T_AdminUsers] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) ) AS [Limit1]
+        LEFT OUTER JOIN  (SELECT [Extent2].[AdminUserId] AS [AdminUserId], [Extent3].[Id] AS [Id], [Extent3].[Name] AS [Name], [Extent3].[CreateDateTime] AS [CreateDateTime], [Extent3].[IsDeleted] AS [IsDeleted]
+            FROM  [dbo].[T_AdminUserRoles] AS [Extent2]
+            INNER JOIN [dbo].[T_Roles] AS [Extent3] ON [Extent3].[Id] = [Extent2].[RoleId] ) AS [Join1] ON [Limit1].[Id] = [Join1].[AdminUserId]
+    )  AS [Project2]
+    ORDER BY [Project2].[Id] ASC, [Project2].[C1] ASC
+2018-09-16 13:16:38,339 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:16:38,339 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:16:38,341 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '2' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:16:38,341 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- p__linq__0: '2' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:16:38,343 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:16:38 +08:00
+
+2018-09-16 13:16:38,343 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:16:38 +08:00
+
+2018-09-16 13:16:38,372 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 27 ms with result: SqlDataReader
+
+2018-09-16 13:16:38,372 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 27 ms with result: SqlDataReader
+
+2018-09-16 13:16:38,373 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:16:38,373 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:16:38,375 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:16:38 +08:00
+
+2018-09-16 13:16:38,375 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:16:38 +08:00
+
+2018-09-16 13:16:38,376 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:16:38 +08:00
+
+2018-09-16 13:16:38,376 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:16:38 +08:00
+
+2018-09-16 13:16:38,377 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:16:38,377 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent2].[Id] AS [Id], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Description] AS [Description], 
+    [Extent2].[CreateDateTime] AS [CreateDateTime], 
+    [Extent2].[IsDeleted] AS [IsDeleted]
+    FROM  [dbo].[T_RolePermissions] AS [Extent1]
+    INNER JOIN [dbo].[T_Permissions] AS [Extent2] ON [Extent1].[PermissionId] = [Extent2].[Id]
+    WHERE [Extent1].[RoleId] = @EntityKeyValue1
+2018-09-16 13:16:38,379 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:16:38,379 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:16:38,381 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:16:38,381 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- EntityKeyValue1: '1' (Type = Int64, IsNullable = false)
+
+2018-09-16 13:16:38,382 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:16:38 +08:00
+
+2018-09-16 13:16:38,382 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:16:38 +08:00
+
+2018-09-16 13:16:38,405 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 21 ms with result: SqlDataReader
+
+2018-09-16 13:16:38,405 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 21 ms with result: SqlDataReader
+
+2018-09-16 13:16:38,406 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:16:38,406 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:16:38,407 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:16:38 +08:00
+
+2018-09-16 13:16:38,407 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:16:38 +08:00
+
+2018-09-16 13:16:41,803 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:16:41 +08:00
+
+2018-09-16 13:16:41,803 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Opened connection at 2018/9/16 13:16:41 +08:00
+
+2018-09-16 13:16:42,848 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[PasswordHash] AS [PasswordHash], 
+    [Extent1].[PasswordSalt] AS [PasswordSalt], 
+    [Extent1].[PhoneNum] AS [PhoneNum], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[CityId] AS [CityId], 
+    [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Extent1].[LastErrorDateTime] AS [LastErrorDateTime], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_AdminUsers] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:16:42,848 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[PasswordHash] AS [PasswordHash], 
+    [Extent1].[PasswordSalt] AS [PasswordSalt], 
+    [Extent1].[PhoneNum] AS [PhoneNum], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[CityId] AS [CityId], 
+    [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Extent1].[LastErrorDateTime] AS [LastErrorDateTime], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_AdminUsers] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2018-09-16 13:16:42,851 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:16:42,851 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:16:42,853 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:16:42 +08:00
+
+2018-09-16 13:16:42,853 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Executing at 2018/9/16 13:16:42 +08:00
+
+2018-09-16 13:16:42,943 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 88 ms with result: SqlDataReader
+
+2018-09-16 13:16:42,943 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:-- Completed in 88 ms with result: SqlDataReader
+
+2018-09-16 13:16:42,945 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:16:42,945 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:
+
+2018-09-16 13:16:42,946 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:16:42 +08:00
+
+2018-09-16 13:16:42,946 [15] DEBUG ZSZ.Service.ZSZDbContext  - EF执行SQL:Closed connection at 2018/9/16 13:16:42 +08:00
+

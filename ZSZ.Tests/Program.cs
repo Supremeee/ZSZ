@@ -90,6 +90,14 @@ namespace ZSZ.Tests
             //        }
             //    } 
             //}
+
+            int[] nums = new[] {7, 8, 5, 4, 2, 6, 9, 1, 3};
+            Algorithm.QuickSort(nums);
+            foreach (var num in nums)
+            {
+                    Console.Write(" "+ num);
+            }
+            Console.WriteLine();
             Console.WriteLine("ok");
             Console.ReadKey();
         }
