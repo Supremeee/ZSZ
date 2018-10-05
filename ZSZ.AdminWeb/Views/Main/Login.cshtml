@@ -81,8 +81,7 @@
                     }
                 },
                 onsubmit: true,
-                onfocusout: function (element) { $(element).valid(); },
-                onkeyup: function (element) { $(element).valid(); }
+                onfocusout: function (element) { $(element).valid(); }
             });
 
         }
@@ -105,6 +104,8 @@
                             if (res.status == "error") {
                                 alert(res.errorMsg);
                                 $("#imgVarifyCode").click();
+                            } else if (res.status == "ok") {
+                                location.href = res.data;
                             }
                         },
                         error:function() {

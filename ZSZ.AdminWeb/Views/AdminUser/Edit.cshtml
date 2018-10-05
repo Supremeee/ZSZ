@@ -27,7 +27,7 @@
     <div class="row cl">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>确认密码：</label>
         <div class="formControls col-xs-8 col-sm-9">
-            <input type="password" class="input-text" value="" placeholder="如果为空则不修改密码"id="confirmPassword" name="confirmPassword">
+            <input type="password" class="input-text" value="" placeholder="如果为空则不修改密码" id="confirmPassword" name="confirmPassword">
         </div>
     </div>
     <div class="row cl">
@@ -39,7 +39,7 @@
     <div class="row cl ">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>城市：</label>
         <div class="formControls col-xs-8 col-sm-9">
-            <select class="dropDown" id="city" name="city" required>
+            <select class="dropDown" id="cityId" name="cityId" required>
                 @foreach (var city in Model.Citys)
                 {
                     <option value="@city.Id" selected="@(Model.AdminUser.CityId == city.Id)">@city.Name</option>
@@ -47,17 +47,18 @@
             </select>
         </div>
     </div>
-    
-    <div class="row cl" >
-        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>角色：</label>
-        @foreach (var role in Model.AllRoles)
-        {
-            <div class="col-xs-4 col-sm-3 check-box">
-                <input type="checkbox" checked="@(Model.SelectRoleIds.Contains(role.Id))" value="@role.Id" id="RoleIds_@role.Id" name="RoleIds">
-                <label for="RoleIds_@role.Id" class="">@role.Name</label>
-            </div>
-        }
 
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>角色：</label>
+        <div class="formControls col-xs-8 col-sm-9">
+            @foreach (var role in Model.AllRoles)
+            {
+                <div class="col-xs-4 col-sm-3 check-box">
+                    <input type="checkbox" checked="@(Model.SelectRoleIds.Contains(role.Id))" value="@role.Id" id="RoleIds_@role.Id" name="RoleIds">
+                    <label for="RoleIds_@role.Id" class="">@role.Name</label>
+                </div>
+            }
+        </div>
     </div>
     <div class="row cl">
         <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
@@ -124,7 +125,7 @@
                         }
                     });
                 }
-                
+
             });
 
         });

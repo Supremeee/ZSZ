@@ -3,53 +3,53 @@
     ViewBag.Title = "List";
 }
 
-<section class="Hui-article-box">
-    <nav class="breadcrumb">
-        <i class="Hui-iconfont">&#xe67f;</i> 首页
-        <span class="c-gray en">&gt;</span>
-        管理员管理
-        <span class="c-gray en">&gt;</span>
-        管理员列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
-    </nav>
-    <div class="Hui-article">
-        <article class="cl pd-20">
 
-            <div class="cl pd-5 bg-1 bk-gray mt-20">
-                <span class="l"> <a href="javascript:;" onclick="batch_del()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="admin_add('添加权限','/Permission/Add','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加权限</a> </span>
-                <span class="r">共有数据：<strong>@Model.Length</strong> 条</span>
-            </div>
-            <form id="listForm">
-                <table class="table table-border table-bordered table-bg">
-                    <thead>
-                        <tr>
-                            <th scope="col" colspan="9">权限列表</th>
-                        </tr>
+<nav class="breadcrumb">
+    <i class="Hui-iconfont">&#xe67f;</i> 首页
+    <span class="c-gray en">&gt;</span>
+    管理员管理
+    <span class="c-gray en">&gt;</span>
+    管理员列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+</nav>
+<div class="Hui-article">
+    <article class="cl pd-20">
+
+        <div class="cl pd-5 bg-1 bk-gray mt-20">
+            <span class="l"> <a href="javascript:;" onclick="batch_del()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="admin_add('添加权限','/Permission/Add','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加权限</a> </span>
+            <span class="r">共有数据：<strong>@Model.Length</strong> 条</span>
+        </div>
+        <form id="listForm">
+            <table class="table table-border table-bordered table-bg">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="9">权限列表</th>
+                    </tr>
+                    <tr class="text-c">
+                        <th width="25"><input type="checkbox" name="" value=""></th>
+                        <th width="150">名称</th>
+                        <th width="90">描述</th>
+                        <th width="100">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var per in Model)
+                    {
                         <tr class="text-c">
-                            <th width="25"><input type="checkbox" name="" value=""></th>
-                            <th width="150">名称</th>
-                            <th width="90">描述</th>
-                            <th width="100">操作</th>
+                            <td><input type="checkbox" value="@per.Id" name="selectIds"></td>
+                            <td>@per.Name</td>
+                            <td>@per.Description</td>
+                            <td class="td-manage">
+                                <a title="编辑" href="javascript:;" onclick="admin_edit('权限编辑','/Permission/Edit/@per.Id','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                                <a title="删除" href="javascript:;" onclick="admin_del(this,'@per.Id')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var per in Model)
-                        {
-                            <tr class="text-c">
-                                <td><input type="checkbox" value="@per.Id" name="selectIds"></td>
-                                <td>@per.Name</td>
-                                <td>@per.Description</td>
-                                <td class="td-manage">
-                                    <a title="编辑" href="javascript:;" onclick="admin_edit('权限编辑','/Permission/Edit/@per.Id','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
-                                    <a title="删除" href="javascript:;" onclick="admin_del(this,'@per.Id')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </form>
-        </article>
-    </div>
-</section>
+                    }
+                </tbody>
+            </table>
+        </form>
+    </article>
+</div>
+
 
 
 @section FooterScript
@@ -114,7 +114,7 @@
         function admin_edit(title, url, w, h) {
             layer_show(title, url, w, h);
         }
-        
-        
+
+
     </script>
 }

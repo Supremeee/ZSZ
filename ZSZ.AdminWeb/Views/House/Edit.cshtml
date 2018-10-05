@@ -1,0 +1,235 @@
+﻿@model ZSZ.AdminWeb.Models.HouseEditViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutNoNav.cshtml";
+}
+
+<form class="form form-horizontal" id="editForm">
+    <input type="hidden" value="@Model.House.Id" id="Id" name="id" />
+    <div class="row cl">
+        <label class="form-label col-sm-2"><span class="c-red">*</span>区域：</label>
+        <div class="formControls col-sm-2">
+            @Html.DropDownList("RegionId", new SelectList(Model.Regions, "Id", "Name",Model.House.RegionId), "请选择", new { @class = "select-box" })
+        </div>
+        <label class="form-label col-sm-2"><span class="c-red">*</span>小区：</label>
+        <div class="formControls col-sm-2">
+            <select id="communityId" name="communityId" class="select-box"></select>
+        </div>
+        <label class="form-label col-sm-2"><span class="c-red">*</span>房型：</label>
+        <div class="formControls col-sm-2">
+            @Html.DropDownList("RoomTypeId", new SelectList(Model.RoomTypes, "Id", "Name",Model.House.RoomTypeId), "请选择", new { @class = "select-box" })
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-sm-2"><span class="c-red">*</span>地址：</label>
+        <div class="formControls col-sm-6">
+            <input type="text" class="input-text" value="@Model.House.Address" placeholder="" id="houseAddress" name="houseAddress">
+        </div>
+        <label class="form-label col-sm-2"><span class="c-red">*</span>月租金：</label>
+        <div class="formControls col-sm-2">
+            <input type="text" class="input-text" value="@Model.House.MonthRent" placeholder="" id="monthRent" name="monthRent">
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-sm-2"><span class="c-red">*</span>状态：</label>
+        <div class="formControls col-sm-2">
+            @Html.DropDownList("StatusId", new SelectList(Model.Statuses, "Id", "Name", Model.House.StatusId), "请选择", new { @class = "select-box" })
+        </div>
+        <label class="form-label col-sm-2"><span class="c-red">*</span>面积：</label>
+        <div class="formControls col-sm-2">
+            <input type="text" class="input-text" value="@Model.House.Area" placeholder="房间面积" id="houseArea" name="houseArea">
+        </div>
+        <label class="form-label col-sm-2"><span class="c-red">*</span>装修：</label>
+        <div class="formControls col-sm-2">
+            @Html.DropDownList("DecorateStatusId", new SelectList(Model.DecorateStatues, "Id", "Name", Model.House.DecorateStatusId), "请选择", new { @class = "select-box" })
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-sm-2"><span class="c-red">*</span>楼层：</label>
+        <div class="formControls col-sm-1">
+            <input type="text" class="input-text" value="@Model.House.FloorIndex" placeholder="楼层" id="floorIndex" name="floorIndex">
+        </div>
+        <div class="formControls col-sm-1">
+            <input type="text" class="input-text" value="@Model.House.TotalFloorCount" placeholder="总层" id="totalIndex" name="totalIndex">
+        </div>
+        <label class="form-label col-sm-2"><span class="c-red">*</span>朝向：</label>
+        <div class="formControls col-sm-2">
+            <input type="text" class="input-text" value="@Model.House.Direction" placeholder="" id="direction" name="direction">
+        </div>
+        <label class="form-label col-sm-2"><span class="c-red">*</span>可看房时间：</label>
+        <div class="formControls col-sm-2">
+            <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})" class="input-text" value="@Model.House.LookableDateTime.ToShortDateString()" placeholder="" id="lookableDatetime" name="lookableDatetime">
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-sm-2"><span class="c-red">*</span>入住时间：</label>
+        <div class="formControls col-sm-2">
+            <input type="text" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'lookableDatetime\')}',dateFmt:'yyyy-MM-dd',readOnly:true})" class="input-text" value="@Model.House.CheckInDateTime.ToShortDateString()" placeholder="" id="checkInDate" name="checkInDate">
+        </div>
+        <label class="form-label col-sm-2"><span class="c-red">*</span>业主姓名：</label>
+        <div class="formControls col-sm-2">
+            <input type="text" class="input-text" value="@Model.House.OwnerName" placeholder="" id="ownerName" name="ownerName">
+        </div>
+        <label class="form-label col-sm-2"><span class="c-red">*</span>业主电话：</label>
+        <div class="formControls col-sm-2">
+            <input type="text" class="input-text" value="@Model.House.OwnerPhoneNum" placeholder="" id="ownerPhoneNum" name="ownerPhoneNum">
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-sm-2">房屋类型</label>
+        <div class="formControls col-sm-2">
+            @Html.DropDownList("TypeId", new SelectList(Model.Types, "Id", "Name", Model.House.RoomTypeId), "请选择", new { @class = "select-box" })
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-sm-2">房源描述</label>
+        <div class="formControls col-sm-10">
+            @*<textarea id="description" name="description"></textarea>*@
+            <script id="containerDesc" name="description" type="text/plain">
+                @Html.Raw(Model.House.Description)
+            </script>
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-sm-2"><span class="c-red">*</span>配套设施：</label>
+
+        @foreach (var attachment in Model.Attachments)
+        {
+            <div class="formControls col-sm-2">
+                <input type="checkbox" class="dropDown" id="attachmentIds_@attachment.Id" name="attachmentIds" value="@attachment.Id" required checked="@Model.House.AttachmentIds.Contains(attachment.Id)">
+                <label for="attachmentIds_@attachment.Id">@attachment.Name</label>
+            </div>
+        }
+    </div>
+
+    <div class="row cl">
+        <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+            <input class="btn btn-primary radius" type="button" id="saveBtn" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+        </div>
+    </div>
+</form>
+@section FooterScript
+{
+    <script src="~/lib/ueditor/1.4.3/ueditor.config.js"></script>
+    <script src="~/lib/ueditor/1.4.3/ueditor.all.min.js"></script>
+    <script>
+        var ue = UE.getEditor('containerDesc');
+        function formValidate() {
+            var result = $("#editForm").validate({
+                rules: {
+                    RegionId: {
+                        required: true
+                    },
+                    communityId: {
+                        required: true
+                    },
+                    RoomTypeId: {
+                        required: true
+
+                    },
+                    houseAddress: {
+                        required: true
+                    },
+                    monthRent: {
+                        required: true
+
+                    },
+                    StatusId: {
+                        required: true
+                    },
+                    houseArea: {
+                        required: true
+                    },
+                    DecorateStatusId: {
+                        required: true
+                    },
+                    floorIndex: {
+                        required: true,
+                        isIntGtZero: true
+                    },
+                    totalIndex: {
+                        required: true,
+                        isIntGtZero: true
+                    }, direction: {
+                        required: true
+                    }, lookableDatetime: {
+                        required: true
+
+                    }, checkInDate: {
+                        required: true
+                    }, ownerName: {
+                        required: true
+                    }, ownerPhoneNum: {
+                        required: true
+                    }
+                },
+                onsubmit: true,
+                onfocusout: function (element) { $(element).valid(); },
+
+            });
+            return result;
+        }
+
+        var loadCommunities = function (res) {
+            if (res.status == "ok") {
+                $("#communityId").empty();
+                for (var i = 0; i < res.data.length; i++) {
+                    var temp = res.data[i];
+                    $("<option value='" + temp.id + "'>" + temp.name + "</option>").appendTo($("#communityId"));
+                }
+
+            }
+        }
+        $(function () {
+            formValidate();
+            $("#RegionId").change(function () {
+                $.ajax({
+                    url: "/House/LoadCommunities",
+                    dataType: "json",
+                    type: "post",
+                    data: { regionId: $(this).val() },
+                    success: loadCommunities,
+                    error: function () {
+                        alert("加载小区失败");
+                    }
+                });
+            });
+            $("#RegionId").change();
+            $("#saveBtn").click(function () {
+                if (formValidate().form()) {
+                    var formData = $("#editForm").serializeArray();
+                    $.ajax({
+                        url: "/House/Edit",
+                        type: "post",
+                        data: formData,
+                        dataType: "json",
+                        success: function (res) {
+                            if (res.status == "ok") {
+                                parent.location.reload();
+                            } else if (res.status == "redirect") {
+                                location.href = res.data;
+                            } else if (res.status == "error") {
+                                alert(res.errorMsg);
+                            }
+                            else {
+                                alert("error");
+                            }
+                        },
+                        error: function () {
+                            alert("内部错误");
+                        }
+                    });
+                }
+            });
+            
+
+        });
+    </script>
+}
+
+
+
+
+
+
+

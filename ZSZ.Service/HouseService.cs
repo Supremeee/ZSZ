@@ -31,6 +31,7 @@ namespace ZSZ.Service
                 houseEntity.Description = house.Description;
                 houseEntity.Direction = house.Direction;
                 houseEntity.FloorIndex = house.FloorIndex;
+                houseEntity.TotalFloorCount = house.TotalFloorCount;
                 //houseEntity.HousePics 新增后再单独添加
                 houseEntity.LookableDateTime = house.LookableDateTime;
                 houseEntity.MonthRent = house.MonthRent;
@@ -50,7 +51,7 @@ namespace ZSZ.Service
         public long AddNewHousePic(HousePicDTO housePic)
         {
             HousePicEntity entity = new HousePicEntity();
-            entity.HouseId = housePic.Id;
+            entity.HouseId = housePic.HouseId;
             entity.ThumbUrl = housePic.ThumbUrl;
             entity.Url = housePic.Url;
             using(ZSZDbContext ctx = new ZSZDbContext())
@@ -80,7 +81,7 @@ namespace ZSZ.Service
             using(ZSZDbContext ctx = new ZSZDbContext())
             {
                 BaseService<HouseEntity> service = new BaseService<HouseEntity>(ctx);
-                var house = service.GetAll().Include(u=>u.Attachments).Include(h => h.Community).Include(nameof(HouseEntity.Community) + "" + nameof(CommunityEntity.Region) + "." + nameof(RegionEntity.City)).Include(nameof(HouseEntity.Community) + "" + nameof(CommunityEntity.Region)).Include(h => h.DecorateStatus).Include(h => h.RoomType).Include(h => h.Status).Include(h => h.Type).Include(h => h.HousePics).SingleOrDefault(u => u.Id == id);
+                var house = service.GetAll().Include(u=>u.Attachments).Include(h => h.Community).Include(nameof(HouseEntity.Community) + "." + nameof(CommunityEntity.Region) + "." + nameof(RegionEntity.City)).Include(nameof(HouseEntity.Community) + "." + nameof(CommunityEntity.Region)).Include(h => h.DecorateStatus).Include(h => h.RoomType).Include(h => h.Status).Include(h => h.Type).Include(h => h.HousePics).SingleOrDefault(u => u.Id == id);
                 if (house == null)
                     return null;
                 return ToDTO(house);

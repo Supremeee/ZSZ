@@ -55,6 +55,9 @@
       <HintPath>..\packages\CaptchaGen.1.0.0\lib\net40\CaptchaGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="CodeCarvings.Piczard, Version=1.2.3.0, Culture=neutral, PublicKeyToken=88d00d4422733d60, processorArchitecture=MSIL">
+      <HintPath>..\packages\CodeCarvings.Piczard.1.2.3.3\lib\CodeCarvings.Piczard.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -114,6 +117,7 @@
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\watermark.png" />
     <Content Include="lib\datatables\1.10.0\jquery.dataTables.min.js" />
     <Content Include="lib\DD_belatedPNG_0.0.8a-min.js" />
     <Content Include="lib\echarts\3.4.0\echarts.common.min.js" />
@@ -1150,12 +1154,14 @@
     <Content Include="js\_references.js" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminUserHelper.cs" />
     <Compile Include="App_Start\CheckPermissionAttribute.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\ZSZAuthrizationFilter.cs" />
     <Compile Include="App_Start\ZSZExceptionFilter.cs" />
     <Compile Include="Controllers\AdminUserController.cs" />
+    <Compile Include="Controllers\HouseController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\PermissionController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1173,6 +1179,10 @@
     <Compile Include="Models\AdminUserAddPostModel.cs" />
     <Compile Include="Models\AdminUserEditModel.cs" />
     <Compile Include="Models\AdminUserEditPostModel.cs" />
+    <Compile Include="Models\HouseAddPostModel.cs" />
+    <Compile Include="Models\HouseAddViewModel.cs" />
+    <Compile Include="Models\HouseEditPostModel.cs" />
+    <Compile Include="Models\HouseEditViewModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\PermissionAddModel.cs" />
     <Compile Include="Models\PermissionEditModel.cs" />
@@ -1208,7 +1218,6 @@
     <Content Include="lib\webuploader\0.1.5\images\progress.psd" />
     <Content Include="lib\webuploader\0.1.5\README.md" />
     <None Include="packages.config" />
-    <Content Include="Views\Main\Index.cshtml" />
     <Content Include="Views\Main\Login.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -1222,6 +1231,13 @@
     <Content Include="Views\AdminUser\Add.cshtml" />
     <Content Include="Views\AdminUser\Edit.cshtml" />
     <Content Include="Views\Shared\_LayoutNoNav.cshtml" />
+    <Content Include="Views\House\List.cshtml" />
+    <Content Include="Views\House\Add.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\House\Edit.cshtml" />
+    <Content Include="Views\Main\Index.cshtml" />
+    <Content Include="Views\House\PicUpload.cshtml" />
+    <Content Include="Views\House\PicList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1232,6 +1248,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\" />
+    <Folder Include="PicUpload\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>

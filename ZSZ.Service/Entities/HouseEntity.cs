@@ -29,7 +29,7 @@ namespace ZSZ.Service.Entities
         public string OwnerName { get; set; }
         public string OwnerPhoneNum { get; set; }
         public string Description { get; set; }
-        public virtual ICollection<AttachmentEntity> Attachments { get; set; }
-        public virtual ICollection<HousePicEntity> HousePics { get; set; }
+        public virtual ICollection<AttachmentEntity> Attachments { get; set; } = new List<AttachmentEntity>();
+        public virtual ICollection<HousePicEntity> HousePics { get; set; } = new List<HousePicEntity>();
     }
 }

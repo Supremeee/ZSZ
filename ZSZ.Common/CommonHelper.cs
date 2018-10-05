@@ -39,7 +39,7 @@ namespace ZSZ.Common
                 string result = "";
                 for (int i = 0; i < computeBytes.Length; i++)
                 {
-                    result += computeBytes[i].ToString("X").Length == 1;
+                    result += computeBytes[i].ToString("X").Length == 1 ? "0" + computeBytes[i].ToString("X") : computeBytes[i].ToString("X");
                 }
                 return result;
             }

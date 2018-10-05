@@ -1,0 +1,56 @@
+﻿@model ZSZ.DTO.HousePicDTO[]
+@{
+    ViewBag.Title = "PicList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-container">
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"> <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> </span> <span class="r">共有数据：<strong>@Model.Count()</strong> 条</span> </div>
+    <div class="portfolio-content">
+        <ul class="cl portfolio-area">
+            @foreach(var pic in Model)
+            {
+            <li class="item">
+                <div class="portfoliobox">
+                    <input class="checkbox" name="selectIds" type="checkbox" value="@pic.Id">
+                    <div class="picbox"><a href="@pic.Url" data-lightbox="gallery" data-title="客厅1"><img src="@pic.ThumbUrl"></a></div>
+                    <div class="textbox">客厅 </div>
+                </div>
+            </li>
+            }
+        </ul>
+    </div>
+</div>
+
+@section FooterScript
+{
+    <script type="text/javascript" src="lib/lightbox2/2.8.1/js/lightbox.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".portfolio-area li").Huihover();
+        });
+
+        function datadel() {
+            var ids = new Array();
+            $("input[name='selectIds']:checked").each(function () {
+                var value = $(this).val();
+                ids.push(value);
+            });
+            $.ajax({
+                url: "/House/DeletePic",
+                type:"post",
+                data: { selectIds: ids },
+                dataType: "json",
+                success: function (res) {
+                    if (res.status == "ok") {
+                        location.reload();
+                    }
+                },
+                error: function () {
+                    alert("网络请求出错");
+                }
+            });
+        }
+    </script>
+
+}

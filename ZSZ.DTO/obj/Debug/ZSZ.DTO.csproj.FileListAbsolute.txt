@@ -15,3 +15,15 @@ I:\Project\ZSZ\ZSZ.DTO\bin\Debug\ZSZ.DTO.pdb
 I:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.csprojResolveAssemblyReference.cache
 I:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.dll
 I:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.pdb
+G:\Project\ZSZ\ZSZ.DTO\bin\Debug\ZSZ.DTO.dll
+G:\Project\ZSZ\ZSZ.DTO\bin\Debug\ZSZ.DTO.pdb
+G:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.csprojAssemblyReference.cache
+G:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.csproj.CoreCompileInputs.cache
+G:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.dll
+G:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.pdb
+H:\Project\ZSZ\ZSZ.DTO\bin\Debug\ZSZ.DTO.dll
+H:\Project\ZSZ\ZSZ.DTO\bin\Debug\ZSZ.DTO.pdb
+H:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.csprojAssemblyReference.cache
+H:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.csproj.CoreCompileInputs.cache
+H:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.dll
+H:\Project\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.pdb

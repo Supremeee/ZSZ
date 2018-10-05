@@ -3,57 +3,57 @@
     ViewBag.Title = "List";
 }
 
-<section class="Hui-article-box">
-    <nav class="breadcrumb">
-        <i class="Hui-iconfont">&#xe67f;</i> 首页
-        <span class="c-gray en">&gt;</span>
-        角色管理
-        <span class="c-gray en">&gt;</span>
-        角色列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
-    </nav>
-    <div class="Hui-article">
-        <article class="cl pd-20">
 
-            <div class="cl pd-5 bg-1 bk-gray mt-20">
-                <span class="l"> <a href="javascript:;" onclick="batch_del()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="role_add('添加角色','/Role/Add','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加角色</a> </span>
-                <span class="r">共有数据：<strong>@Model.Length</strong> 条</span>
-            </div>
-            <form id="listForm">
-                <table class="table table-border table-bordered table-bg">
-                    <thead>
-                        <tr>
-                            <th scope="col" colspan="9">角色列表</th>
-                        </tr>
+<nav class="breadcrumb">
+    <i class="Hui-iconfont">&#xe67f;</i> 首页
+    <span class="c-gray en">&gt;</span>
+    角色管理
+    <span class="c-gray en">&gt;</span>
+    角色列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+</nav>
+<div class="Hui-article">
+    <article class="cl pd-20">
+
+        <div class="cl pd-5 bg-1 bk-gray mt-20">
+            <span class="l"> <a href="javascript:;" onclick="batch_del()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="role_add('添加角色','/Role/Add','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加角色</a> </span>
+            <span class="r">共有数据：<strong>@Model.Length</strong> 条</span>
+        </div>
+        <form id="listForm">
+            <table class="table table-border table-bordered table-bg">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="9">角色列表</th>
+                    </tr>
+                    <tr class="text-c">
+                        <th width="25"><input type="checkbox" name="" value=""></th>
+                        <th width="150">名称</th>
+
+                        <th width="100">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var role in Model)
+                    {
                         <tr class="text-c">
-                            <th width="25"><input type="checkbox" name="" value=""></th>
-                            <th width="150">名称</th>
+                            <td><input type="checkbox" value="@role.Id" name="selectIds"></td>
+                            <td>@role.Name</td>
 
-                            <th width="100">操作</th>
+                            <td class="td-manage">
+                                <a title="编辑" href="javascript:;" onclick="role_edit('角色编辑','/Role/Edit/@role.Id','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                                <a title="删除" href="javascript:;" onclick="role_del(this,'@role.Id')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var role in Model)
-                        {
-                            <tr class="text-c">
-                                <td><input type="checkbox" value="@role.Id" name="selectIds"></td>
-                                <td>@role.Name</td>
+                    }
+                </tbody>
+            </table>
+        </form>
+    </article>
+</div>
 
-                                <td class="td-manage">
-                                    <a title="编辑" href="javascript:;" onclick="role_edit('角色编辑','/Role/Edit/@role.Id','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
-                                    <a title="删除" href="javascript:;" onclick="role_del(this,'@role.Id')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </form>
-        </article>
-    </div>
-</section>
 
 
 @section FooterScript
-{
+{7
     <script type="text/javascript">
         /*
             参数解释：
@@ -79,7 +79,7 @@
                         if (res.status == "ok") {
                             layer.msg('已删除!', { icon: 1, time: 1000 });
                             location.reload();
-                        }else {
+                        } else {
                             layer.msg('删除失败!', { icon: 2, time: 1000 });
                         }
                     },

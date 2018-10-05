@@ -17,7 +17,7 @@ namespace ZSZ.AdminWeb.App_Start
             {
                 return;
             }
-            long? userId = (long?)filterContext.HttpContext.Session["AdminUserId"];
+            long? userId = (long?)filterContext.HttpContext.Session["LoginUserId"];
             if (userId == null)
             {
                 if (filterContext.HttpContext.Request.IsAjaxRequest())

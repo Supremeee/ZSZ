@@ -14,13 +14,13 @@
     <div class="row cl">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>姓名：</label>
         <div class="formControls col-xs-8 col-sm-9">
-            <input type="text" class="input-text" value="" placeholder="" id="name" name="name" >
+            <input type="text" class="input-text" value="" placeholder="" id="name" name="name">
         </div>
     </div>
     <div class="row cl">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>密码：</label>
         <div class="formControls col-xs-8 col-sm-9">
-            <input type="password" class="input-text" value="" placeholder="" id="password" name="password" >
+            <input type="password" class="input-text" value="" placeholder="" id="password" name="password">
         </div>
     </div>
     <div class="row cl">
@@ -46,17 +46,18 @@
             </select>
         </div>
     </div>
-   
+
     <div class="row cl">
         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>角色：</label>
-        @foreach (var role in Model.Roles)
-        {
-            <div class="check-box col-xs-4 col-sm-3">
-                <input type="checkbox" value="@role.Id" id="RoleIds_@role.Id" name="RoleIds">
-                <label for="RoleIds_@role.Id">@role.Name</label>
-            </div>
-        }
-
+        <div class="formControls col-xs-8 col-sm-9">
+            @foreach (var role in Model.Roles)
+            {
+                <div class="check-box col-xs-4 col-sm-3">
+                    <input type="checkbox" value="@role.Id" id="RoleIds_@role.Id" name="RoleIds">
+                    <label for="RoleIds_@role.Id">@role.Name</label>
+                </div>
+            }
+        </div>
     </div>
     <div class="row cl">
         <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
@@ -74,7 +75,7 @@
                         required: true,
                         minlength: 1,
                         maxlength: 50,
-                        isMobile:true
+                        isMobile: true
                     },
                     name: {
                         required: true,
@@ -90,11 +91,11 @@
                         required: true,
                         minlength: 1,
                         maxlength: 50,
-                        equalTo:"#password"
+                        equalTo: "#password"
                     },
                     email: {
                         required: true,
-                        email:true
+                        email: true
                     }
                 },
                 onsubmit: true,
@@ -107,7 +108,7 @@
         $(function () {
             formValidate();
             $("#saveBtn").click(function () {
-                
+
                 if (formValidate().form()) {
                     var formData = $("#addForm").serializeArray();
                     $.ajax({
@@ -118,9 +119,9 @@
                         success: function (res) {
                             if (res.status == "ok") {
                                 parent.location.reload();
-                            }else if (res.status == "redirect") {
+                            } else if (res.status == "redirect") {
                                 location.href = res.data;
-                            }else if (res.status == "error") {
+                            } else if (res.status == "error") {
                                 alert(res.errorMsg);
                             }
                             else {
@@ -132,17 +133,17 @@
                         }
                     });
                 }
-                
+
             });
-            $("#phonenum").blur(function() {
+            $("#phonenum").blur(function () {
                 var phone = $("#phonenum").val();
                 if (formValidate().element("#phonenum")) {
                     $.ajax({
                         url: "/AdminUser/CheckPhoneNum",
-                        type:"post",
+                        type: "post",
                         data: { phonenum: phone },
                         datatype: "json",
-                        success:function(res) {
+                        success: function (res) {
                             if (res.status == "exists") {
                                 layer.msg("手机号码已被他人使用");
                                 $("#phonenum").val("");

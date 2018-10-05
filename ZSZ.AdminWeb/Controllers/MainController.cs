@@ -39,8 +39,8 @@ namespace ZSZ.AdminWeb.Controllers
             bool result = AdminUserService.CheckLogin(model.PhoneNum, model.Password);
             if (result)
             {
-                Session["AdminUserId"] = AdminUserService.GetByPhoneNum(model.PhoneNum).Id;
-                return RedirectToAction("Index");
+                Session["LoginUserId"] = AdminUserService.GetByPhoneNum(model.PhoneNum).Id;
+                return Json(new AjaxResult { Status = "ok", Data = "/Main/Index" });
             }
             else
             {
